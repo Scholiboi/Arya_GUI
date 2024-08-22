@@ -8,6 +8,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: aqua;
 }
 
@@ -20,9 +21,9 @@ body {
 
 .arya {
   width: 500px;
-  margin: auto;
   border-radius: 10px;
   height: 50px;
+  margin: 10px;
   background-color: aliceblue;
   align-items: center;
   justify-content: center;
@@ -31,9 +32,9 @@ body {
 
 .teamid {
   width: 200px;
-  margin: auto;
   border-radius: 10px;
   height: 50px;
+  margin: 10px;
   background-color: aliceblue;
   align-items: center;
   justify-content: center;
@@ -63,23 +64,27 @@ body {
 .power {
   background-color: #32cd32;
   margin: 10px;
-  padding: 50px;
+  height: 125px;
+  width: 125px;
 }
 .sim {
   background-color: #dc143c;
   margin: 10px;
-  padding: 50px;
+  height: 125px;
+  width: 125px;
 
 }
 .flight {
   background-color: #dc143c;
   margin: 10px;
-  padding: 50px;
+  height: 125px;
+  width: 125px;
 }
 .calibrate {
   background-color: #ff8c00;
   margin: 10px;
-  padding: 50px;
+  height: 125px;
+  width: 125px;
 }
 
 
