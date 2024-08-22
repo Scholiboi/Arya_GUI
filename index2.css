@@ -1,0 +1,229 @@
+body {
+  background-color: #96ceb4;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  position: fixed;
+  margin: 10px;
+  width: 194vh;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.arya {
+  width: 500px;
+  border-radius: 10px;
+  height: 50px;
+  margin: 10px;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.teamid {
+  width: 200px;
+  border-radius: 10px;
+  height: 50px;
+  margin: 10px;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Header Content Styles End here */
+
+/* Middle Content Styles Start here */
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin-top: 200px; 
+  position: fixed;
+  margin-bottom: 150px;
+
+}
+
+.power {
+  background-color: #32cd32;
+  margin: 10px;
+  height: 85px;
+  width: 85px;
+}
+.sim {
+  background-color: #dc143c;
+  margin: 10px;
+  height: 85px;
+  width: 85px;
+
+}
+.flight {
+  background-color: #dc143c;
+  margin: 10px;
+  height: 85px;
+  width: 85px;
+}
+.calibrate {
+  background-color: #ff8c00;
+  margin: 10px;
+  height: 85px;
+  width: 85px;
+}
+
+
+.main-home-content{
+  background-color: aliceblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 200px;
+}
+
+
+.cmd-graph{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(176, 82, 176);
+  border-radius: 10px;
+}
+
+.cmd{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(43, 143, 124);
+}
+.cmd-image{
+  width: 400px;
+  height: 130px;
+  border-radius: 10px;
+}
+.cmd h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.graph{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(61, 33, 124);
+}
+.graph-image{
+  width: 200px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.model-3d{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(158, 168, 67);
+  border-radius: 10px;
+}
+.model-image{
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+
+.parameters{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: aliceblue;
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.parameter{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.parameter-name{
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.parameter-value{
+  text-align: center;
+  align-items: center;
+  background-color: #96CEB4;
+  margin: 0px;
+  padding: 0px;
+}
+
+.graphphoto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.graphs img {
+  width: calc(33.33% - 10px); 
+  margin: 5px;
+  height: auto;
+  margin-left: 140px;
+}
+
+.mapphoto {
+  max-width: 150%;
+  max-height: 100%;
+  margin-left: 140px;
+}
+
+.csvphoto {
+  max-width: 90%;
+  max-height: 100%;
+  margin-left: 140px;
+}
+/* Middle Content Styles ends here */
+
+
+/* Footer Content Styles Start here */
+
+/* Footer Content Styles ends here */
