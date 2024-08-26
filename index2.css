@@ -37,8 +37,22 @@ body {
 line-height: 2.5rem;
 }
 
+.pause img {
+  height: 50px;
+  width: auto;
+  background-color:aliceblue;
+}
+
+.restart img {
+  height: 50px;
+  width: 40px;
+  background-color:aliceblue;
+  padding: 5px;
+}
+
 .teamid {
-  width: 300px;
+  display: flex;
+  width: 250px;
   border-radius: 10px;
   height: 50px;
   margin: 10px;
@@ -50,6 +64,7 @@ line-height: 2.5rem;
   letter-spacing: 0.025em;
   font-size: 1.25rem; 
   line-height: 1.75rem;
+  position: relative; 
 }
 
 .teamid h2 {
@@ -62,7 +77,7 @@ line-height: 2.5rem;
 }
 
 .flag {
-  width: auto;
+  width: 15%;
   height: 30px;
   margin: 10px;
 }
