@@ -9,18 +9,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  background-color: #96ceb4;
+
 }
 
 .logo {
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 50px;
   margin: 10px;
   border-radius: 10px;
 }
 
 .arya {
-  width: 500px;
+  width: 550px;
   border-radius: 10px;
   height: 50px;
   margin: 10px;
@@ -48,7 +49,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: aquamarine;
+  background-color: 96CEB4;
 }
 
 .button-container {
@@ -89,12 +90,13 @@ body {
 
 
 .main-home-content{
-  background-color: aliceblue;
+  background-color: 96ceb4;
   border-radius: 10px;
-  margin-top: 10px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 
@@ -104,7 +106,7 @@ body {
   justify-content: space-evenly;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(176, 82, 176);
+  background-color: 96ceb4;
   border-radius: 10px;
 }
 
@@ -114,12 +116,14 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: rgb(43, 143, 124);
+  background-color: #D9D9D9;
+  text-align: center;
 }
 .cmd-image{
   width: 430px;
-  height: 230px;
+  height: 200px;
   border-radius: 10px;
+  padding: 20px;
 }
 .cmd h2{
   margin: 0px;
@@ -132,12 +136,16 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
-  background-color: rgb(61, 33, 124);
+  background-color: #D9D9D9;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .graph-image{
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 200px;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .model-3d{
@@ -147,7 +155,7 @@ body {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(158, 168, 67);
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 .model-image{
@@ -223,7 +231,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  background-color: 96ceb4;
   border-radius: 10px;
 }
 
@@ -233,7 +241,7 @@ body {
   align-items: start;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(26, 90, 146);
+  background-color: aliceblue;
   border-radius: 10px;
 }
 
@@ -242,15 +250,15 @@ body {
   flex-direction: row;
   align-items: start;
   margin: 5px;
-  color: rgb(159, 74, 74);
+  color: aliceblue;
 }
 
 .button-box button{
   padding: 5px;
   height: 50px;
   width: 90px;
-  background-color: rgb(159, 74, 74);
-  color: white;
+  background-color: aliceblue;
+  color: black;
   border-radius: 10px;
 }
 
@@ -259,14 +267,17 @@ body {
   height: 40px;
 }
 
-
+.line {
+  color: black;
+  background-color: black;
+}
 .infographics{
   display: flex;
   flex-direction: column;
   align-items: stretch;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(26, 90, 146);
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 
@@ -275,14 +286,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(26, 146, 86);
+  background-color: #D9D9D9;
 }
 
 .flight-software{
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(146, 26, 118);
+  background-color: #D9D9D9;
 }
 
 .flight-software-all-states{
@@ -304,6 +315,7 @@ body {
   margin: 5px;
   width: 100px;
   height: 100px;
+  border-radius: 10px;
 }
 
 .time{
