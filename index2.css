@@ -2,7 +2,7 @@
 body {
   background-color: #96ceb4;
   font-family: Arial, sans-serif;
-  margin: 10px;
+  margin: 5px;
 }
 
 .header {
@@ -10,7 +10,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #96ceb4;
-
 }
 
 .logo {
@@ -47,7 +46,7 @@ body {
 .middle {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: 96CEB4;
 }
@@ -56,58 +55,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-left: 10px;
   background-color: aliceblue;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .power {
   background-color: #32cd32;
-  margin: 10px;
-  height: 125px;
-  width: 125px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100px;
+  width: 100px;
 }
+
 .sim {
   background-color: #dc143c;
-  margin: 10px;
-  height: 125px;
-  width: 125px;
-
+  margin: 5px;
+  height: 100px;
+  width: 100px;
 }
+
 .flight {
   background-color: #dc143c;
-  margin: 10px;
-  height: 125px;
-  width: 125px;
+  margin: 5px;
+  height: 100px;
+  width: 100px;
 }
 .calibrate {
   background-color: #ff8c00;
-  margin: 10px;
-  height: 125px;
-  width: 125px;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
 }
 
-
 .main-home-content{
-  background-color: 96ceb4;
+  background-color: #bb6d23;
   border-radius: 10px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-}
-
-
-.cmd-graph{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 10px;
+  align-items: stretch;
   padding: 10px;
-  background-color: 96ceb4;
-  border-radius: 10px;
 }
 
 .cmd{
@@ -117,32 +107,34 @@ body {
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  text-align: center;
 }
+
 .cmd-image{
-  width: 430px;
-  height: 200px;
+  width: 450px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
+  flex-grow: 10;
 }
 .cmd h2{
   margin: 0px;
   padding: 0px;
+  flex-grow: 2;
 }
 
 .graph{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
+
 .graph-image{
-  width: 240px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -151,26 +143,37 @@ body {
 .model-3d{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  margin: 10px;
-  padding: 10px;
   background-color: #D9D9D9;
   border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 .model-image{
   width: 250px;
-  height: 400px;
+  height: 350px;
   border-radius: 10px;
 }
 
+.model-3d h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.model-3d h3{
+  margin: 0px;
+  padding: 0px;
+}
 
 .parameters{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
+  align-self: center;
+  margin: 5px;
+  padding: 5px;
   background-color: #D9D9D9 ;
   width: 200px;
   border-radius: 10px;
@@ -188,6 +191,7 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
+  font-size: 15px;
 }
 
 .parameter-value{
@@ -196,6 +200,7 @@ body {
   background-color: #96CEB4;
   margin: 0px;
   padding: 0px;
+  font-size: 14px;
 }
 
 .graphphoto{
@@ -230,7 +235,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: #96ceb4;
   border-radius: 10px;
 }
@@ -239,8 +244,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   background-color: aliceblue;
   border-radius: 10px;
 }
@@ -255,7 +260,7 @@ body {
 
 .button-box button{
   padding: 5px;
-  height: 50px;
+  height: 30px;
   width: 90px;
   background-color: aliceblue;
   color: black;
@@ -263,46 +268,61 @@ body {
 }
 
 .button-box img{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
-.line {
-  color: black;
-  background-color: black;
-}
 .infographics{
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 10px;
-  padding: 10px;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
   background-color: #D9D9D9;
   border-radius: 10px;
 }
 
-.flight-status{
-  display:flex;
+.deployment-status{
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
-  background-color: #D9D9D9;
+  background-color: #96ceb4;
+  border-radius: 10px;
+}
+
+.deployment-status h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.deployment-status p{
+  margin: 0px;
+  padding: 0px;
 }
 
 .flight-software{
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: #D9D9D9;
+  margin: 2px;
+  background-color: #96ceb4;
+  border-radius: 10px;
+}
+
+.flight-software h2{
+  margin: 0px;
+  padding: 0px;
 }
 
 .flight-software-all-states{
-  display:flex;
+  display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: center;
   background-color: rgb(50, 26, 146);
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .flight-software-state{
@@ -313,14 +333,14 @@ body {
   text-align: center;
   background-color: rgb(26, 146, 140);
   margin: 5px;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
 }
 
 .time{
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: rgb(26, 146, 46);
   margin: 5px;
