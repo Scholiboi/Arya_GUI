@@ -28,18 +28,43 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  align-content: center;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  font-size: 2.25rem; 
+line-height: 2.5rem;
 }
 
 .teamid {
-  width: 200px;
+  width: 300px;
   border-radius: 10px;
   height: 50px;
   margin: 10px;
   background-color: aliceblue;
-  align-items: center;
-  justify-content: center;
+  justify-items: center;
   text-align: center;
+  align-content: center;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  font-size: 1.25rem; 
+  line-height: 1.75rem;
 }
+
+.teamid h2 {
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: space-evenly;
+}
+
+.flag {
+  width: auto;
+  height: 30px;
+  margin: 10px;
+}
+
 /* Header Content Styles End here */
 
 /* Middle Content Styles Start here */
@@ -48,7 +73,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: 96CEB4;
+  background-color: #96CEB4;
 }
 
 .button-container {
@@ -91,7 +116,7 @@ body {
 }
 
 .main-home-content{
-  background-color: #bb6d23;
+  background-color: #96ceb4;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
