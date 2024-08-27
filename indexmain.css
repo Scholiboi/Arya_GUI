@@ -365,9 +365,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(50, 26, 146);
+  background-color: #001687;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .flight-software-state{
@@ -376,11 +376,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgb(26, 146, 140);
+  background-color: #39A79A;
+  font-size: 14px;
+  color: white;
   margin: 5px;
   width: 85px;
   height: 85px;
   border-radius: 10px;
+}
+
+#current-state{
+  background-color: #79EBDE;
 }
 
 .time{
