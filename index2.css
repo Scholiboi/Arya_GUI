@@ -38,18 +38,19 @@ line-height: 2.5rem;
 
 .pause img {
   height: 50px;
-  width: auto;
+  width: 50px;
   background-color:aliceblue;
 }
 
 .restart img {
   height: 50px;
-  width: 40px;
+  width: 50px;
   background-color:aliceblue;
   padding: 5px;
 }
 
 .teamid {
+  display: flex;
   width: 300px;
   border-radius: 10px;
   height: 50px;
