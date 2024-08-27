@@ -81,3 +81,60 @@ document.querySelector('.sim').addEventListener('click', function() {
     this.classList.toggle('clicked');
 });
 
+
+// Initialize the data arrays
+var x = [];
+var y = [];
+var z = [];
+
+// Initial plot data and layout
+var data = [{
+    x: x,
+    y: y,
+    z: z,
+    mode: 'lines',
+    type: 'scatter3d'
+}];
+
+var layout = {
+    title: '3D Line Plot',
+    autosize: true,
+    scene: {
+        xaxis: { title: 'X Axis' },
+        yaxis: { title: 'Y Axis' },
+        zaxis: { title: 'Z Axis' }
+    }
+};
+
+// Create the initial plot
+Plotly.newPlot('graph-image', data, layout);
+
+// Function to update the data
+function updateData() {
+    // Generate new random data
+    var newX = Math.random() * 10;
+    var newY = Math.random() * 10;
+    var newZ = Math.random() * 10;
+
+    // Append new data to the arrays
+    x.push(newX);
+    y.push(newY);
+    z.push(newZ);
+
+    // Keep the array length fixed
+    if (x.length > 50) {
+        x.shift();
+        y.shift();
+        z.shift();
+    }
+
+    // Update the plot
+    Plotly.update('graph-image', {
+        x: [x],
+        y: [y],
+        z: [z]
+    }, [0]); 
+}
+
+// Update the graph every second
+setInterval(updateData, 1000);
