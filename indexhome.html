@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index2.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="indexmain.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>GUI</title>
 </head>
 <body>
@@ -99,19 +99,19 @@
         <div class="navigation-box">
             <div class="button-box">
                 <img src="../images/home.png" alt="home" class="button">
-                <button>HOME</button>
+                <button><a href="indexhome.html">HOME</a></button>
             </div>
             <div class="button-box">
                 <img src="../images/graph.png" alt="graphs" class="button">
-                <button>GRAPHS</button>
+                <button><a href="indexgraphs.html">GRAPHS</a></button>
             </div>
             <div class="button-box">
                 <img src="../images/maps.png" alt="maps" class="button">
-                <button>MAPS</button>
+                <button><a href="indexmaps.html">MAPS</a></button>
             </div>
             <div class="button-box">
                 <img src="../images/csv.png" alt="csv" class="button">
-                <button>CSV DATA</button>
+                <button><a href="indexcsv.html">CSV DATA</a></button>
             </div>
         </div>
         <div class="infographics">
@@ -132,7 +132,7 @@
                     <div class="flight-software-state">
                         <h3>Launch Pad</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="current-state">
                         <h3>Ascent</h3>
                     </div>
                     <div class="flight-software-state">
@@ -158,19 +158,6 @@
             </div>
         </div>
     </div>
-    <div class="graphs">
-        <img src="../images/g1.jpeg" class="graphphoto">
-        <img src="../images/g2.jpeg" class="graphphoto">
-        <img src="../images/g3.jpeg" class="graphphoto">
-        <img src="../images/g4.jpeg" class="graphphoto">
-        <img src="../images/g5.jpeg" class="graphphoto">
-        <img src="../images/g6.jpeg" class="graphphoto">
-    </div>
-    <div class="maps">
-        <img src="../images/map.jpg" class="mapphoto">
-    </div>
-    <div class="csv">
-        <img src="../images/csv.jpg" class="csvphoto">
-    </div>
+    <script src="index.js"></script>
 </body>
 </html>
