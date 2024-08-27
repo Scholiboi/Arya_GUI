@@ -88,6 +88,7 @@ body {
   border-radius: 10px;
   position: fixed;
   left: 0px;
+  margin-top: 50px;
 }
 
 .power {
@@ -95,39 +96,39 @@ body {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
 }
 
 .sim {
   background-color: #dc143c;
   margin: 5px;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
 }
 
 .flight {
   background-color: #dc143c;
   margin: 5px;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
 }
 .calibrate {
   background-color: #ff8c00;
   margin-bottom: 10px;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
 }
 
 .main-home-content{
-  width: 75%;
-  background-color: #96ceb4;
+  background-color: #96CEB4;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: stretch;
   padding: 10px;
+  padding-right: 50px;
+  margin-top: 50px;
 }
 
 .cmd{
@@ -141,15 +142,14 @@ body {
 }
 
 .cmd-image{
-  width: 450px;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
-  padding: 10px;
-  flex-grow: 10;
 }
+
 .cmd h2{
   margin: 0px;
   padding: 0px;
-  flex-grow: 2;
 }
 
 .graph{
@@ -164,8 +164,8 @@ body {
 }
 
 .graph-image{
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -204,6 +204,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 5px;
+  margin-top: 60px;
   padding: 5px;
   background-color: #D9D9D9 ;
   width: 200px;
@@ -224,7 +225,7 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .parameter-value{
@@ -233,41 +234,47 @@ body {
   background-color: #96CEB4;
   margin: 0px;
   padding: 0px;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .graphphoto{
-  width: 450px;
-  height: 350px;
-  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
   padding: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .graphs{
-  width: 75%;
+  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #96CEB4;
+  background-color: #311cb6;
 }
 
 .maps{
   display: flex;
   flex-direction: row;
-  width: 95%;
   justify-content: center;
+  padding-right: 35px;
 }
 
 .mapphoto {
-  width: 1000px;
-  height: 425px;
+  margin-top: 50px;
+  width: 1100px;
+  height: 550px;
 }
 
 .csvphoto {
-  max-width: 90%;
-  max-height: 100%;
-  margin-left: 140px;
+  max-width:89%;
+  height: 110%;
+  margin-left: 160px;
+  margin-top: 50px;
 }
 /* Middle Content Styles ends here */
 

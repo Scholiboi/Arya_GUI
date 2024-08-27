@@ -27,12 +27,12 @@
             <button class="calibrate">CALIBRATE</button>
         </div>
         <div class="graphs">
-            <img src="../images/g1.jpeg" class="graphphoto">
-            <img src="../images/g2.jpeg" class="graphphoto">
-            <img src="../images/g3.jpeg" class="graphphoto">
-            <img src="../images/g4.jpeg" class="graphphoto">
-            <img src="../images/g5.jpeg" class="graphphoto">
-            <img src="../images/g6.jpeg" class="graphphoto">
+            <canvas id="graph1" class="graphphoto"></canvas>
+            <canvas id="graph2" class="graphphoto"></canvas>
+            <canvas id="graph3" class="graphphoto"></canvas>
+            <canvas id="graph4" class="graphphoto"></canvas>
+            <canvas id="graph5" class="graphphoto"></canvas>
+            <canvas id="graph6" class="graphphoto"></canvas>
         </div>
         <div class="parameters">
             <div class="parameter">
@@ -131,7 +131,7 @@
                     <div class="flight-software-state">
                         <h3>Launch Pad</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="current-state">
                         <h3>Ascent</h3>
                     </div>
                     <div class="flight-software-state">
@@ -157,5 +157,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
