@@ -3,13 +3,18 @@ body {
   background-color: #96ceb4;
   font-family: Arial, sans-serif;
   margin: 5px;
+  margin-top: 0px;
 }
 
 .header {
+  z-index: 1000;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #96ceb4;
+  width: 100%;
+  position: sticky;
 }
 
 .logo {
@@ -20,6 +25,7 @@ body {
 }
 
 .arya {
+  display: flex;
   width: 550px;
   border-radius: 10px;
   height: 50px;
@@ -32,10 +38,11 @@ body {
   font-weight: 800;
   letter-spacing: 0.025em;
   font-size: 2.25rem; 
-line-height: 2.5rem;
+  line-height: 2.5rem;
 }
 
 .teamid {
+  display: flex;
   width: 300px;
   border-radius: 10px;
   height: 50px;
@@ -47,16 +54,10 @@ line-height: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.025em;
   font-size: 1.25rem; 
-  line-height: 1.75rem;
 }
 
 .teamid h2 {
-  justify-items: center;
-  text-align: center;
-  align-content: center;
-  align-items: center;
-  justify-self: center;
-  justify-content: space-evenly;
+  align-self: center;
 }
 
 .flag {
@@ -72,8 +73,9 @@ line-height: 2.5rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #96CEB4;
+  width: 100%;
 }
 
 .button-container {
@@ -84,6 +86,8 @@ line-height: 2.5rem;
   margin-left: 10px;
   background-color: aliceblue;
   border-radius: 10px;
+  position: fixed;
+  left: 0px;
 }
 
 .power {
@@ -116,11 +120,12 @@ line-height: 2.5rem;
 }
 
 .main-home-content{
+  width: 75%;
   background-color: #96ceb4;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   padding: 10px;
 }
@@ -130,6 +135,7 @@ line-height: 2.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5px;
   border-radius: 10px;
   background-color: #D9D9D9;
 }
@@ -153,8 +159,8 @@ line-height: 2.5rem;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px;
+  margin: 5px
 }
 
 .graph-image{
@@ -174,6 +180,7 @@ line-height: 2.5rem;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 5px;
 }
 
 .model-image{
@@ -196,12 +203,13 @@ line-height: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
   margin: 5px;
   padding: 5px;
   background-color: #D9D9D9 ;
   width: 200px;
   border-radius: 10px;
+  position: fixed;
+  right: 0px;
 }
 
 .parameter{
@@ -229,22 +237,31 @@ line-height: 2.5rem;
 }
 
 .graphphoto{
+  width: 450px;
+  height: 350px;
+  align-items: center;
+  padding: 10px;
+}
+
+.graphs{
+  width: 75%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: #96CEB4;
+}
+
+.maps{
+  display: flex;
+  flex-direction: row;
+  width: 95%;
   justify-content: center;
 }
 
-.graphs img {
-  width: calc(33.33% - 10px); 
-  margin: 5px;
-  height: auto;
-  margin-left: 140px;
-}
-
 .mapphoto {
-  max-width: 150%;
-  max-height: 100%;
-  margin-left: 140px;
+  width: 1000px;
+  height: 425px;
 }
 
 .csvphoto {
@@ -257,7 +274,10 @@ line-height: 2.5rem;
 
 /* Footer Content Styles Start here */
 .lower {
+  width: 100%;
   display: flex;
+  position: fixed;
+  bottom: 0px;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
@@ -358,8 +378,8 @@ line-height: 2.5rem;
   text-align: center;
   background-color: rgb(26, 146, 140);
   margin: 5px;
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   border-radius: 10px;
 }
 
@@ -367,7 +387,7 @@ line-height: 2.5rem;
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(26, 146, 46);
+  background-color: #D9D9D9;
   margin: 5px;
   border-radius: 10px;
 }
@@ -376,7 +396,7 @@ line-height: 2.5rem;
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(13, 213, 216);
+  background-color: #96ceb4;
   margin: 5px;
   border-radius: 10px;
 }
@@ -385,7 +405,7 @@ line-height: 2.5rem;
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(13, 213, 216);
+  background-color: #96ceb4;
   margin: 5px;
   border-radius: 10px;
 }
