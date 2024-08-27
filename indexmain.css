@@ -41,6 +41,18 @@ body {
   line-height: 2.5rem;
 }
 
+.pause img {
+  height: 50px;
+  width: 50px;
+  background-color:aliceblue;
+}
+
+.restart img {
+  height: 50px;
+  width: 50px;
+  background-color:aliceblue;
+}
+
 .teamid {
   display: flex;
   width: 300px;
@@ -88,7 +100,9 @@ body {
   border-radius: 10px;
   position: fixed;
   left: 0px;
-  margin-top: 50px;
+  margin-top: 10px;
+  text-decoration: none;
+  height: 510px;
 }
 
 .power {
@@ -98,6 +112,11 @@ body {
   margin-right: 10px;
   height: 125px;
   width: 125px;
+  text-decoration: none;
+}
+
+button{
+  text-decoration: none;
 }
 
 .sim {
@@ -131,9 +150,19 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  /* padding: 5px; */
+  padding-right: 230px;
+}
+
+.cmdgraph{
+  background-color: #96CEB4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   padding: 10px;
-  padding-right: 50px;
-  margin-top: 50px;
+  padding-right: 10px;
+  padding-left: 150px;
 }
 
 .cmd{
@@ -141,14 +170,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
   border-radius: 10px;
   background-color: #D9D9D9;
+  height: 250px;
+  width: 500px;
 }
 
 .cmd-image{
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 200px;
   border-radius: 10px;
 }
 
@@ -159,18 +189,19 @@ body {
 
 .graph{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  padding: 5px;
-  margin: 5px
+  margin-top: 10px;
+  height: 250px;
+  width: 500px;
 }
 
 #graph-image{
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 230px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -186,11 +217,13 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin: 5px;
+  width:300px;
+  height: 520px;
 }
 
 .model-image{
-  width: 250px;
-  height: 350px;
+  width: 200px;
+  height: 300px;
   border-radius: 10px;
 }
 
@@ -208,11 +241,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5px;
-  margin-top: 60px;
+  margin: 10px;
+  margin-top: 10px;
   padding: 5px;
   background-color: #D9D9D9 ;
-  width: 200px;
+  width: 220px;
+  height: 505px;
   border-radius: 10px;
   position: fixed;
   right: 0px;
@@ -247,39 +281,47 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 10px;
-  width: 10px;
-  height: 10px;
+  margin-right: 50px;
+  padding: 5px;
 }
 
 .graphs{
-  width: 60%;
-  display: flex;
+  width: 66%;
+  display: grid;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);  
+  justify-content: center;
   background-color: #311cb6;
+  margin-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  gap: 30px;
+  padding: 10px;
+}
+
+canvas {
+  width: 100% !important; /* Make canvas responsive */
+  height: 300px !important; /* Set a fixed height */
 }
 
 .maps{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 35px;
+  padding-right:80px;
+  width:850px;
 }
 
 .mapphoto {
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 1100px;
   height: 550px;
 }
 
-.csvphoto {
-  max-width:89%;
-  height: 110%;
-  margin-left: 160px;
-  margin-top: 50px;
+#csvRoot {
+  margin-left: 300px;
+  margin-top: 100px;
 }
 /* Middle Content Styles ends here */
 
@@ -305,6 +347,7 @@ body {
   padding: 5px;
   background-color: aliceblue;
   border-radius: 10px;
+  width: 150px;
 }
 
 .button-box{
@@ -327,6 +370,7 @@ body {
 .button-box img{
   width: 30px;
   height: 30px;
+  padding-right: 10px;
 }
 
 .infographics{
@@ -345,7 +389,7 @@ body {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-evenly;
-  background-color: #96ceb4;
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 
@@ -359,12 +403,19 @@ body {
   padding: 0px;
 }
 
+.horizontal-line {
+  width: 100%; /* Full width */
+  height: 2px; /* Thickness */
+  background-color: black; /* Line color */
+  margin: 10px 0;
+}
+
 .flight-software{
   display:flex;
   flex-direction: column;
   align-items: center;
   margin: 2px;
-  background-color: #96ceb4;
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 
@@ -378,7 +429,6 @@ body {
   flex-direction: row;
   align-items: center;
   background-color: #001687;
-  padding: 5px;
   border-radius: 10px;
 }
 
@@ -406,8 +456,9 @@ body {
   flex-direction: row;
   align-items: center;
   background-color: #D9D9D9;
-  margin: 5px;
+  margin: 15px;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .mission-time{
@@ -415,8 +466,10 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
-  margin: 5px;
+  margin-right: 10px;
   border-radius: 10px;
+  padding: 5px;
+ 
 }
 
 .packet-count{
@@ -424,7 +477,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
-  margin: 5px;
   border-radius: 10px;
+  padding: 5px;
 }
 /* Footer Content Styles ends here */
