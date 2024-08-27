@@ -92,7 +92,7 @@ body {
 }
 
 .power {
-  background-color: #32cd32;
+  background-color: #dc143c;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -113,11 +113,16 @@ body {
   height: 125px;
   width: 125px;
 }
+
 .calibrate {
   background-color: #ff8c00;
   margin-bottom: 10px;
   height: 125px;
   width: 125px;
+}
+
+.clicked {
+  background-color: #00D722;
 }
 
 .main-home-content{
