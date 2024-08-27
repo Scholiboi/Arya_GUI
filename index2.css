@@ -1,8 +1,9 @@
 /* Header Content Styles Start Here */
 body {
   background-color: #96ceb4;
-  font-family: Arial, sans-serif;
-  margin: 5px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 10px;
+  font-weight: 600;
 }
 
 .header {
@@ -49,8 +50,7 @@ line-height: 2.5rem;
 }
 
 .teamid {
-  display: flex;
-  width: 250px;
+  width: 300px;
   border-radius: 10px;
   height: 50px;
   margin: 10px;
@@ -75,7 +75,7 @@ line-height: 2.5rem;
 }
 
 .flag {
-  width: 15%;
+  width: auto;
   height: 30px;
   margin: 10px;
 }
@@ -86,7 +86,7 @@ line-height: 2.5rem;
 .middle {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   background-color: #96CEB4;
 }
@@ -103,20 +103,18 @@ line-height: 2.5rem;
 
 .power {
   background-color: #32cd32;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 100px;
-  width: 100px;
+  margin: 10px;
+  height: 125px;
+  width: 125px;
 }
 
 .sim {
   background-color: #dc143c;
-  margin: 5px;
-  height: 100px;
-  width: 100px;
-}
+  margin: 10px;
+  height: 125px;
+  width: 125px;
 
+}
 .flight {
   background-color: #dc143c;
   margin: 5px;
@@ -125,9 +123,9 @@ line-height: 2.5rem;
 }
 .calibrate {
   background-color: #ff8c00;
-  margin-bottom: 10px;
-  height: 100px;
-  width: 100px;
+  margin: 10px;
+  height: 125px;
+  width: 125px;
 }
 
 .main-home-content{
@@ -136,7 +134,15 @@ line-height: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
+
+}
+
+
+.cmd-graph{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -147,10 +153,12 @@ line-height: 2.5rem;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
+  text-align: center;
 }
 
 .cmd-image{
-  width: 450px;
+  width: 430px;
+  height: 200px;
   border-radius: 10px;
   padding: 10px;
   flex-grow: 10;
@@ -163,18 +171,18 @@ line-height: 2.5rem;
 
 .graph{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .graph-image{
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 200px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -183,14 +191,11 @@ line-height: 2.5rem;
 .model-3d{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #D9D9D9;
   border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
-
 .model-image{
   width: 250px;
   height: 350px;
@@ -240,7 +245,6 @@ line-height: 2.5rem;
   background-color: #96CEB4;
   margin: 0px;
   padding: 0px;
-  font-size: 14px;
 }
 
 .graphphoto{
@@ -284,8 +288,8 @@ line-height: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 5px;
-  padding: 5px;
+  margin: 10px;
+  padding: 10px;
   background-color: aliceblue;
   border-radius: 10px;
 }
@@ -308,8 +312,15 @@ line-height: 2.5rem;
 }
 
 .button-box img{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.horizontal-line {
+  width: 100%; /* Full width */
+  height: 2px; /* Thickness */
+  background-color: black; /* Line color */
+  margin: 10px 0;
 }
 
 .infographics{
@@ -323,10 +334,10 @@ line-height: 2.5rem;
   border-radius: 10px;
 }
 
-.deployment-status{
-  display: flex;
+.flight-status{
+  display:flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   background-color: #96ceb4;
   border-radius: 10px;
@@ -357,12 +368,12 @@ line-height: 2.5rem;
 }
 
 .flight-software-all-states{
-  display: flex;
+  display:flex;
   flex-direction: row;
   align-items: center;
   background-color: rgb(50, 26, 146);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .flight-software-state{
@@ -380,7 +391,7 @@ line-height: 2.5rem;
 
 .time{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   background-color: rgb(26, 146, 46);
   margin: 5px;
