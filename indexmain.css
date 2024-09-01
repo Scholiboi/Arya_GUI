@@ -19,9 +19,10 @@ body {
 
 .logo {
   width: auto;
-  height: 50px;
+  height: 55px;
   margin: 10px;
   border-radius: 10px;
+  margin-left: 30px;
 }
 
 .arya {
@@ -37,10 +38,11 @@ body {
   align-content: center;
   font-weight: 800;
   letter-spacing: 0.025em;
-  font-size: 2.25rem; 
+  font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
+<<<<<<< HEAD
 .pause img {
   height: 50px;
   width: 50px;
@@ -52,6 +54,28 @@ body {
   width: 50px;
   background-color:aliceblue;
   padding: 5px;
+=======
+
+.change {
+display:flex;
+flex-direction: row;
+}
+
+
+#playpauseButton  {
+  height: 50px;
+  width: 50px;
+  background-color:aliceblue;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+#restartButton {
+  height: 50px;
+  width: 50px;
+  background-color:aliceblue;
+  border-radius: 10px;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .teamid {
@@ -66,9 +90,13 @@ body {
   align-content: center;
   font-weight: 800;
   letter-spacing: 0.025em;
+<<<<<<< HEAD
   font-size: 1.25rem; 
   line-height: 1.75rem;
   position: relative; 
+=======
+  font-size: 1.25rem;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .teamid h2 {
@@ -103,7 +131,9 @@ body {
   border-radius: 10px;
   position: fixed;
   left: 0px;
-  margin-top: 50px;
+  margin-top: 10px;
+  text-decoration: none;
+  height: 510px;
 }
 
 .power {
@@ -111,6 +141,11 @@ body {
   margin: 10px;
   height: 125px;
   width: 125px;
+  text-decoration: none;
+}
+
+button {
+  text-decoration: none;
 }
 
 .sim {
@@ -138,7 +173,7 @@ body {
   background-color: #00D722;
 }
 
-.main-home-content{
+.main-home-content {
   background-color: #96CEB4;
   border-radius: 10px;
   display: flex;
@@ -154,20 +189,36 @@ body {
   justify-content: space-evenly;
   margin: 10px;
   align-items: stretch;
+<<<<<<< HEAD
 
   padding: 10px;
   padding-right: 50px;
   margin-top: 50px;
+=======
+  /* padding: 5px; */
+  padding-right: 230px;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
-.cmd{
+.cmdgraph {
+  background-color: #96CEB4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px;
+  padding-right: 10px;
+  padding-left: 150px;
+}
+
+.cmd {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
   border-radius: 10px;
   background-color: #D9D9D9;
+<<<<<<< HEAD
   text-align: center;
 }
 
@@ -175,34 +226,61 @@ body {
 
   width: 400px;
   height: 400px;
+=======
+  height: 250px;
+  width: 500px;
+}
+
+input#commandInput {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.output {
+  width: 80%;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.cmd-image {
+  width: 420px;
+  height: 200px;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   border-radius: 10px;
 }
 
-.cmd h2{
+.cmd h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.graph{
+.graph {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  padding: 5px;
-  margin: 5px
+  margin-top: 10px;
+  height: 250px;
+  width: 500px;
 }
 
-#graph-image{
-  width: 400px;
-  height: 400px;
+#graph-image {
+  width: 300px;
+  height: 230px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
 }
 
-.model-3d{
+.model-3d {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -212,38 +290,48 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin: 5px;
+  width: 300px;
+  height: 520px;
 }
+<<<<<<< HEAD
 .model-image{
   width: 250px;
   height: 350px;
+=======
+
+.model-image {
+  width: 200px;
+  height: 300px;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   border-radius: 10px;
 }
 
-.model-3d h2{
+.model-3d h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.model-3d h3{
+.model-3d h3 {
   margin: 0px;
   padding: 0px;
 }
 
-.parameters{
+.parameters {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5px;
-  margin-top: 60px;
+  margin: 10px;
+  margin-top: 10px;
   padding: 5px;
-  background-color: #D9D9D9 ;
-  width: 200px;
+  background-color: #D9D9D9;
+  width: 220px;
+  height: 505px;
   border-radius: 10px;
   position: fixed;
   right: 0px;
 }
 
-.parameter{
+.parameter {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -251,14 +339,14 @@ body {
   background-color: #D9D9D9;
 }
 
-.parameter-name{
+.parameter-name {
   align-items: center;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
 }
 
-.parameter-value{
+.parameter-value {
   text-align: center;
   align-items: center;
   background-color: #96CEB4;
@@ -267,45 +355,56 @@ body {
   font-size: 20px;
 }
 
-.graphphoto{
+.graphphoto {
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 10px;
-  width: 10px;
-  height: 10px;
+  margin-right: 50px;
+  padding: 5px;
 }
 
-.graphs{
-  width: 60%;
-  display: flex;
+.graphs {
+  width: 66%;
+  display: grid;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   background-color: #311cb6;
+  margin-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  gap: 30px;
+  padding: 10px;
 }
 
-.maps{
+canvas {
+  width: 100% !important;
+  /* Make canvas responsive */
+  height: 300px !important;
+  /* Set a fixed height */
+}
+
+.maps {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 35px;
+  padding-right: 80px;
+  width: 850px;
 }
 
 .mapphoto {
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 1100px;
   height: 550px;
 }
 
-.csvphoto {
-  max-width:89%;
-  height: 110%;
-  margin-left: 160px;
-  margin-top: 50px;
+#csvRoot {
+  margin-left: 300px;
+  margin-top: 100px;
 }
+
 /* Middle Content Styles ends here */
 
 
@@ -322,7 +421,7 @@ body {
   border-radius: 10px;
 }
 
-.navigation-box{
+.navigation-box {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -330,9 +429,10 @@ body {
   padding: 10px;
   background-color: aliceblue;
   border-radius: 10px;
+  width: 150px;
 }
 
-.button-box{
+.button-box {
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -340,7 +440,7 @@ body {
   color: aliceblue;
 }
 
-.button-box button{
+.button-box button {
   padding: 5px;
   height: 30px;
   width: 90px;
@@ -349,6 +449,7 @@ body {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .button-box img{
   width: 40px;
   height: 40px;
@@ -359,9 +460,15 @@ body {
   height: 2px; /* Thickness */
   background-color: black; /* Line color */
   margin: 10px 0;
+=======
+.button-box img {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
-.infographics{
+.infographics {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -372,50 +479,69 @@ body {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .flight-status{
   display:flex;
+=======
+.deployment-status {
+  display: flex;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #96ceb4;
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 
-.deployment-status h2{
+.deployment-status h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.deployment-status p{
+.deployment-status p {
   margin: 0px;
   padding: 0px;
 }
 
-.flight-software{
-  display:flex;
+.horizontal-line {
+  width: 100%;
+  /* Full width */
+  height: 2px;
+  /* Thickness */
+  background-color: black;
+  /* Line color */
+  margin: 10px 0;
+}
+
+.flight-software {
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2px;
-  background-color: #96ceb4;
+  background-color: #D9D9D9;
   border-radius: 10px;
 }
 
-.flight-software h2{
+.flight-software h2 {
   margin: 0px;
   padding: 0px;
 }
 
+<<<<<<< HEAD
 .flight-software-all-states{
   display:flex;
+=======
+.flight-software-all-states {
+  display: flex;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   flex-direction: row;
   align-items: center;
   background-color: #001687;
-  padding: 5px;
   border-radius: 10px;
 }
 
-.flight-software-state{
-  display:flex;
+.flight-software-state {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -429,34 +555,43 @@ body {
   border-radius: 10px;
 }
 
-#current-state{
+#current-state {
   background-color: #79EBDE;
 }
 
+<<<<<<< HEAD
 .time{
   display:flex;
   flex-direction: column;
+=======
+.time {
+  display: flex;
+  flex-direction: row;
+>>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   align-items: center;
   background-color: #D9D9D9;
-  margin: 5px;
+  margin: 15px;
   border-radius: 10px;
+  padding: 10px;
 }
 
-.mission-time{
-  display:flex;
+.mission-time {
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
-  margin: 5px;
+  margin-right: 10px;
   border-radius: 10px;
+  padding: 5px;
+
 }
 
-.packet-count{
-  display:flex;
+.packet-count {
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
-  margin: 5px;
   border-radius: 10px;
+  padding: 5px;
 }
-/* Footer Content Styles ends here */
+
