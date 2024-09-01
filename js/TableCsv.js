@@ -82,7 +82,7 @@ class TableCsv {
 //     });
 //   });
 
-setInterval(Papa.parse("./js/username-password-recovery-code.csv", {
+setInterval(Papa.parse("./js/test.csv", {
       delimiter: ",",
       download:true,
       skipEmptyLines: true,

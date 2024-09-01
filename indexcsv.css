@@ -464,7 +464,7 @@ table {
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 th {
@@ -475,7 +475,7 @@ th {
 
 th,
 td {
-  padding: 10px 20px;
+  padding: 10px 1px;
 }
 
 tr:nth-child(even) {
