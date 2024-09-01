@@ -37,20 +37,20 @@ body {
   align-content: center;
   font-weight: 800;
   letter-spacing: 0.025em;
-  font-size: 2.25rem; 
+  font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
 .pause img {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
+  background-color: aliceblue;
 }
 
 .restart img {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
+  background-color: aliceblue;
 }
 
 .teamid {
@@ -65,7 +65,7 @@ body {
   align-content: center;
   font-weight: 800;
   letter-spacing: 0.025em;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
 }
 
 .teamid h2 {
@@ -115,7 +115,7 @@ body {
   text-decoration: none;
 }
 
-button{
+button {
   text-decoration: none;
 }
 
@@ -144,7 +144,7 @@ button{
   background-color: #00D722;
 }
 
-.main-home-content{
+.main-home-content {
   background-color: #96CEB4;
   border-radius: 10px;
   display: flex;
@@ -154,7 +154,7 @@ button{
   padding-right: 230px;
 }
 
-.cmdgraph{
+.cmdgraph {
   background-color: #96CEB4;
   border-radius: 10px;
   display: flex;
@@ -165,7 +165,7 @@ button{
   padding-left: 150px;
 }
 
-.cmd{
+.cmd {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,18 +176,35 @@ button{
   width: 500px;
 }
 
-.cmd-image{
+input#commandInput {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.output {
+  width: 80%;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.cmd-image {
   width: 420px;
   height: 200px;
   border-radius: 10px;
 }
 
-.cmd h2{
+.cmd h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.graph{
+.graph {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -199,7 +216,7 @@ button{
   width: 500px;
 }
 
-#graph-image{
+#graph-image {
   width: 300px;
   height: 230px;
   border-radius: 10px;
@@ -207,7 +224,7 @@ button{
   align-items: center;
 }
 
-.model-3d{
+.model-3d {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,34 +234,34 @@ button{
   padding-left: 10px;
   padding-right: 10px;
   margin: 5px;
-  width:300px;
+  width: 300px;
   height: 520px;
 }
 
-.model-image{
+.model-image {
   width: 200px;
   height: 300px;
   border-radius: 10px;
 }
 
-.model-3d h2{
+.model-3d h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.model-3d h3{
+.model-3d h3 {
   margin: 0px;
   padding: 0px;
 }
 
-.parameters{
+.parameters {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 10px;
   margin-top: 10px;
   padding: 5px;
-  background-color: #D9D9D9 ;
+  background-color: #D9D9D9;
   width: 220px;
   height: 505px;
   border-radius: 10px;
@@ -252,7 +269,7 @@ button{
   right: 0px;
 }
 
-.parameter{
+.parameter {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -260,14 +277,14 @@ button{
   background-color: #D9D9D9;
 }
 
-.parameter-name{
+.parameter-name {
   align-items: center;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
 }
 
-.parameter-value{
+.parameter-value {
   text-align: center;
   align-items: center;
   background-color: #96CEB4;
@@ -276,7 +293,7 @@ button{
   font-size: 20px;
 }
 
-.graphphoto{
+.graphphoto {
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -285,11 +302,11 @@ button{
   padding: 5px;
 }
 
-.graphs{
+.graphs {
   width: 66%;
   display: grid;
   flex-direction: row;
-  grid-template-columns: repeat(2, 1fr);  
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   background-color: #311cb6;
   margin-right: 80px;
@@ -300,16 +317,18 @@ button{
 }
 
 canvas {
-  width: 100% !important; /* Make canvas responsive */
-  height: 300px !important; /* Set a fixed height */
+  width: 100% !important;
+  /* Make canvas responsive */
+  height: 300px !important;
+  /* Set a fixed height */
 }
 
-.maps{
+.maps {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right:80px;
-  width:850px;
+  padding-right: 80px;
+  width: 850px;
 }
 
 .mapphoto {
@@ -323,6 +342,7 @@ canvas {
   margin-left: 300px;
   margin-top: 100px;
 }
+
 /* Middle Content Styles ends here */
 
 
@@ -339,7 +359,7 @@ canvas {
   border-radius: 10px;
 }
 
-.navigation-box{
+.navigation-box {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -350,7 +370,7 @@ canvas {
   width: 150px;
 }
 
-.button-box{
+.button-box {
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -358,7 +378,7 @@ canvas {
   color: aliceblue;
 }
 
-.button-box button{
+.button-box button {
   padding: 5px;
   height: 30px;
   width: 90px;
@@ -367,13 +387,13 @@ canvas {
   border-radius: 10px;
 }
 
-.button-box img{
+.button-box img {
   width: 30px;
   height: 30px;
   padding-right: 10px;
 }
 
-.infographics{
+.infographics {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -384,7 +404,7 @@ canvas {
   border-radius: 10px;
 }
 
-.deployment-status{
+.deployment-status {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -393,25 +413,28 @@ canvas {
   border-radius: 10px;
 }
 
-.deployment-status h2{
+.deployment-status h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.deployment-status p{
+.deployment-status p {
   margin: 0px;
   padding: 0px;
 }
 
 .horizontal-line {
-  width: 100%; /* Full width */
-  height: 2px; /* Thickness */
-  background-color: black; /* Line color */
+  width: 100%;
+  /* Full width */
+  height: 2px;
+  /* Thickness */
+  background-color: black;
+  /* Line color */
   margin: 10px 0;
 }
 
-.flight-software{
-  display:flex;
+.flight-software {
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2px;
@@ -419,12 +442,12 @@ canvas {
   border-radius: 10px;
 }
 
-.flight-software h2{
+.flight-software h2 {
   margin: 0px;
   padding: 0px;
 }
 
-.flight-software-all-states{
+.flight-software-all-states {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -432,8 +455,8 @@ canvas {
   border-radius: 10px;
 }
 
-.flight-software-state{
-  display:flex;
+.flight-software-state {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -447,12 +470,12 @@ canvas {
   border-radius: 10px;
 }
 
-#current-state{
+#current-state {
   background-color: #79EBDE;
 }
 
-.time{
-  display:flex;
+.time {
+  display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #D9D9D9;
@@ -461,24 +484,24 @@ canvas {
   padding: 10px;
 }
 
-.mission-time{
-  display:flex;
+.mission-time {
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
   margin-right: 10px;
   border-radius: 10px;
   padding: 5px;
- 
+
 }
 
-.packet-count{
-  display:flex;
+.packet-count {
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
   border-radius: 10px;
   padding: 5px;
 }
-/* Footer Content Styles ends here */
 
+/* Footer Content Styles ends here */

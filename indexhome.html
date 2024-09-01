@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,20 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>GUI</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css" />
+    <script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
 </head>
+
 <body>
     <div class="header">
         <img src="../images/logo.jpeg" alt="Arya Logo" class="logo">
         <div class="arya">
             <H2>DJS ARYA</H2>
         </div>
-        <div class="pause" id="playpauseButton" ><img src="../images/save.png" alt="Arya Logo" id="playpauseButton" class="logo"></div>
-        <div class="restart" id="restartButton"><img src="../images/restart.png" alt="Arya Logo" id="restartButton" class="logo"></div>
+        <div class="pause" id="playpauseButton"><img src="../images/save.png" alt="Arya Logo" id="playpauseButton"
+                class="logo"></div>
+        <div class="restart" id="restartButton"><img src="../images/restart.png" alt="Arya Logo" id="restartButton"
+                class="logo"></div>
         <div class="teamid">
             <img src="../images/flag.jpeg" class="flag">
             <H2>TEAM ID : 1006</H2>
@@ -33,9 +39,9 @@
 
         <div class="main-home-content">
             <div class="cmdgraph">
-                <div class="cmd">
-                    <h2>Command Prompt</h2>
-                    <img src="../images/cmd.png" alt="cmd prompt" class="cmd-image">
+                <div class="cmd" id="terminal">
+                   <input type="text" id="commandInput" placeholder="Enter your command here">
+                    <div class="output" id="outputBox"></div> 
                 </div>
                 <div class="graph">
                     <h2>3D-Graph</h2>
@@ -47,7 +53,7 @@
                 <h2>CanSat Orientation</h2>
                 <h3>36fps</h1>
             </div>
-            
+
         </div>
         <div class="parameters">
             <div class="parameter">
@@ -165,5 +171,7 @@
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="./js/cmd.js"></script>
 </body>
+
 </html>
