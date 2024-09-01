@@ -24,6 +24,7 @@
             <div class="pause"><img id="playpauseButton" src="../images/save.png" alt="Play/Pause"></div>
         </div>
 
+
         <div class="teamid">
             <img src="../images/flag.jpeg" class="flag">
             <H2>TEAM ID : 1006</H2>
@@ -56,57 +57,21 @@
             </div>
 
         </div>
-        <div class="parameters">
-            <div class="parameter">
-                <p class="parameter-name">Altitude(m)</p>
-                <p class="parameter-value">3000</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name" id="temperature">Temperature(C)</p>
-                <p class="parameter-value">22</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Pressure(Pa)</p>
-                <p class="parameter-value">1013</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Acceleration</p>
-                <p class="parameter-value">100</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Rotation</p>
-                <p class="parameter-value">x:32, y:16, z:164</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Latitude, Longitude()</p>
-                <p class="parameter-value">19.0034, 72.9083</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Gyro Spin Rate</p>
-                <p class="parameter-value">6</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Voltage(V)</p>
-                <p class="parameter-value">0.01</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Packet Count</p>
-                <p class="parameter-value">101</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Satellite Count</p>
-                <p class="parameter-value">3000</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Gyrometer(bar)</p>
-                <p class="parameter-value">12.27</p>
-            </div>
-            <div class="parameter">
-                <p class="parameter-name">Tilt(x,y)</p>
-                <p class="parameter-value">-10,40</p>
-            </div>
-        </div>
+    <div id="data">
+        <div id="a">Altitude: --</div>
+        <div id="t">Temperature: --</div>
+        <div id="v">Voltage: --</div>
+        <div id="p">Pressure: --</div>
+        <div id="g_la">GPS Latitude: --</div>
+        <div id="g_lo">GPS Longitude: --</div>
+        <div id="g_ti">Tilt (X,Y): --</div>
+        <div id="g_r">Gyro Rate: --</div>
+        <div id="m">Mode: --</div>
+        <div id="s">State: --</div>
+        <div id="a_s">Air Speed: --</div>
+        <div id="h_s">HS Deployed: --</div>
     </div>
+
     <div class="lower">
         <div class="navigation-box">
             <div class="button-box">
@@ -173,6 +138,7 @@
     </div>
     <script src="index.js"></script>
     <script src="./js/cmd.js"></script>
+    <script src="./datapoints.js"></script>
 </body>
 
 </html>

@@ -248,13 +248,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function fetchData() {
-    fetch('test.csv')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('temperature').innerText = `Temperature: ${data.temperature} °C`;
-            document.getElementById('pressure').innerText = `Pressure: ${data.pressure} hPa`;
-            document.getElementById('voltage').innerText = `Voltage: ${data.voltage} V`;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
