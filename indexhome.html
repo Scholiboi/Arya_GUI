@@ -15,8 +15,10 @@
         <div class="arya">
             <H2>DJS ARYA</H2>
         </div>
-        <div class="pause" id="playpauseButton" ><img src="../images/save.png" alt="Arya Logo" id="playpauseButton" class="logo"></div>
-        <div class="restart" id="restartButton"><img src="../images/restart.png" alt="Arya Logo" id="restartButton" class="logo"></div>
+        <div class="change">
+            <div class="restart"><img id="restartButton" src="../images/restart.png" alt="Restart"></div>
+            <div class="pause"><img id="playpauseButton" src="../images/save.png" alt="Play/Pause"></div>
+        </div>
         <div class="teamid">
             <img src="../images/flag.jpeg" class="flag">
             <H2>TEAM ID : 1006</H2>
@@ -55,7 +57,7 @@
                 <p class="parameter-value">3000</p>
             </div>
             <div class="parameter">
-                <p class="parameter-name">Temperature(C)</p>
+                <p class="parameter-name" id="temperature">Temperature(C)</p>
                 <p class="parameter-value">22</p>
             </div>
             <div class="parameter">
@@ -154,11 +156,11 @@
             </div>
         </div>
         <div class="time">
-            <div class="mission-time">
+            <div class="mission-time" >
                 <h2>Mission Time</h2>
                 <p id="mission-time"></p>
             </div>
-            <div class="packet-count">
+            <div class="packet-count" >
                 <h2>Packet Count</h2>
                 <p id="packet-count"></p>
             </div>

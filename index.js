@@ -170,62 +170,91 @@ window.onload = function() {
         });
       })
     .catch(error => console.error('Error fetching CSV:', error));
-    })(); 
-
-
-    
+    })();    
 };
 
 
-// for displaying current time
- const current_time =[];
- let index1 = 0;
- function display_ct(){
-     if(index1<current_time.length){
-         console.log(current_time[index1]);
-     index1++
-     document.getElementById('mission-time').innerHTML = current_time[index1]
-     }else{
-         return;
-     }
-};
+const current_time = []; 
+let index1 = 0;
+let timer; // Timer variable
+let isPaused = false; // Flag to track pause state
 
-
-// packet count
-const packet_count =[]; 
-let index2 = 0;
-function display_pc(){
-    if(index2<packet_count.length){
-        console.log(packet_count[index2]);
-    index2++
-    document.getElementById('packet-count').innerHTML = 'Packet Count:' + packet_count[index2]
-    }else{
-        console.log(packet_count[index2]);
+function display_ct() {
+    if (index1 < current_time.length && !isPaused) {
+        console.log(current_time[index1]);
+        document.getElementById('mission-time').innerHTML = current_time[index1];
+        index1++;
     }
-};
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-    const csvButton = document.getElementById('csvButton');
-    csvButton.addEventListener('click', function () {
-        window.open('Table.html', '_blank');
-    });
-});
+const packet_count = []; 
+let index2 = 0;
+
+function display_pc() {
+    if (index2 < packet_count.length && !isPaused) {
+        console.log(packet_count[index2]);
+        document.getElementById('packet-count').innerHTML = packet_count[index2];
+        index2++;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const restartButton = document.getElementById('restartButton');
     const playpauseButton = document.getElementById('playpauseButton');
 
-function handleImageClick(button) {
-    button.classList.toggle('active');
-    button.style.opacity = button.classList.contains('active') ? '0.5' : '1'; 
+    function handleImageClick(button) {
+        button.classList.toggle('active');
+        button.style.opacity = button.classList.contains('active') ? '0.5' : '1'; 
+    }
+
+    restartButton.addEventListener('click', function () {
+        handleImageClick(restartButton);
+        // Reset indices and update display
+        index1 = 0;
+        index2 = 0;
+        isPaused = false; // Ensure timer is not paused
+        display_ct();
+        display_pc();
+    });
+
+    playpauseButton.addEventListener('click', function () {
+        handleImageClick(playpauseButton);
+        isPaused = !isPaused; // Toggle pause state
+        if (isPaused) {
+            console.log("Timer and packet count paused.");
+            clearInterval(timer); // Pause the timer
+        } else {
+            console.log("Timer and packet count resumed.");
+            startDisplay(); // Resume the timer
+        }
+    });
+
+    // Example of starting the timer and packet count display
+    function startDisplay() {
+        timer = setInterval(function() {
+            display_ct();
+            display_pc();
+        }, 1000); // Update every second
+    }
+
+    startDisplay(); // Start the display
+
+    // Attach click event listener for "Export to CSV" functionality
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('a[href="Table.html"]') || event.target.closest('a[href="Table.html"]')) {
+            window.open('Table.html', '_blank');
+        }
+    });
+});
+
+
+function fetchData() {
+    fetch('test.csv')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('temperature').innerText = `Temperature: ${data.temperature} °C`;
+            document.getElementById('pressure').innerText = `Pressure: ${data.pressure} hPa`;
+            document.getElementById('voltage').innerText = `Voltage: ${data.voltage} V`;
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }
-
-restartButton.addEventListener('click', function () {
-    handleImageClick(restartButton);
-});
-
-playpauseButton.addEventListener('click', function () {
-    handleImageClick(playpauseButton);
-});
-});
-
