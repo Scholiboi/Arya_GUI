@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexmain.css">
+    <link rel="stylesheet" href="indexcsv.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>GUI</title>
 </head>
+
 <body>
     <div class="header">
         <img src="../images/logo.jpeg" alt="Arya Logo" class="logo">
@@ -25,9 +27,9 @@
             <button class="flight">FLIGHT MODE</button>
             <button class="calibrate">CALIBRATE</button>
         </div>
-        <div class="csv">
-            <img src="../images/csv.jpg" class="csvphoto">
-        </div>
+        <table id="csvRoot"></table>
+        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+        <script type="module" src="./js/TableCsv.js"></script>
     </div>
     <div class="lower">
         <div class="navigation-box">
@@ -93,4 +95,5 @@
         </div>
     </div>
 </body>
+
 </html>
