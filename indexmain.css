@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -93,6 +93,7 @@ flex-direction: row;
 
 /* Middle Content Styles Start here */
 .middle {
+  margin-left: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -102,6 +103,7 @@ flex-direction: row;
 }
 
 .button-container {
+  z-index: 1001;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +163,6 @@ button {
   justify-content: space-between;
 
 }
-
 
 .cmd-graph{
   display: flex;
@@ -286,6 +287,7 @@ input#commandInput {
   border-radius: 10px;
   position: fixed;
   right: 0px;
+  z-index: 1;
 }
 
 .parameter {
@@ -321,8 +323,9 @@ input#commandInput {
   padding: 5px;
 }
 
-.graphs {
-  width: 66%;
+.middle-graphs {
+  margin-left: 200px;
+  width: 65%;
   display: grid;
   flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
@@ -343,6 +346,7 @@ canvas {
 }
 
 .maps {
+  margin-left: 275px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -358,8 +362,11 @@ canvas {
 }
 
 #csvRoot {
-  margin-left: 300px;
-  margin-top: 100px;
+  position: absolute;
+  margin-left: 160px;
+  /* margin-top: 100px; */
+  margin-bottom: 300px;
+  z-index: 1000;
 }
 
 table {
@@ -369,7 +376,7 @@ table {
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 th {
@@ -380,18 +387,22 @@ th {
 
 th,
 td {
-  padding: 10px 20px;
+  padding: 10px 1px;
+}
+
+td{
+  background-color: #ffffff;
 }
 
 tr:nth-child(even) {
   background: #eeeeee;
 }
-
 /* Middle Content Styles ends here */
 
 
 /* Footer Content Styles Start here */
 .lower {
+  z-index: 1001;
   width: 100%;
   display: flex;
   position: fixed;

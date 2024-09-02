@@ -39,6 +39,35 @@ const fetchData = () => {
         .catch(error => console.error('Error fetching CSV:', error));
 };
 
+const updateGraphs = () => {
+    fetch(`test.csv?timestamp=${Date.now()}`)
+        .then(response => response.text())
+        .then(text => {
+            Papa.parse(text, {
+                header: true,
+                dynamicTyping: true,
+                complete: ({ data }) => {
+                    if (data.length) {
+                        console.log('CSV data:', data);
+                        const rowData = data[currentRow];
+                        console.log('Displaying row:', currentRow, rowData);
+                        currentRow = (currentRow + 1) % data.length;
+                        a++;
+                        updateChart(charts[0], { x: a, y: rowData.TEMPERATURE});
+                        updateChart(charts[1], { x: a, y: rowData.PRESSURE });
+                        updateChart(charts[2], { x: a, y: rowData.VOLTAGE });
+                        updateChart(charts[3], { x: a, y: rowData.ALTITUDE });
+                        updateChart(charts[4], { x: a, y: Math.random() * 100 });
+                        updateChart(charts[5], { x: a, y: Math.random() * 100 });
+                    } else {
+                        console.error('No data found in the CSV.');
+                    }
+                },
+                error: error => console.error('Error parsing CSV:', error)
+            });
+        })
+        .catch(error => console.error('Error fetching CSV:', error));
+    };
 
 document.querySelector('.power').addEventListener('click', function() {
     if (this.classList.contains('clicked')) {
@@ -58,7 +87,7 @@ document.querySelector('.power').addEventListener('click', function() {
             chart.update();
         });
     } else {
-            // Recreate charts if they don't exist
+        // Recreate charts if they don't exist
         if (charts.length === 0) {
             const ctx1 = document.getElementById('graph1').getContext('2d');
             const ctx2 = document.getElementById('graph2').getContext('2d');
@@ -74,15 +103,7 @@ document.querySelector('.power').addEventListener('click', function() {
             charts.push(createChart(ctx6, 'graph 6'));
         }
         // Start updating charts
-        intervalId = setInterval(() => {
-            a++;
-            updateChart(charts[0], { x: a, y: Math.random() * 100 });
-            updateChart(charts[1], { x: a, y: Math.random() * 100 });
-            updateChart(charts[2], { x: a, y: Math.random() * 100 });
-            updateChart(charts[3], { x: a, y: Math.random() * 100 });
-            updateChart(charts[4], { x: a, y: Math.random() * 100 });
-            updateChart(charts[5], { x: a, y: Math.random() * 100 });
-        }, 1000);
+        intervalId = setInterval(updateGraphs, 1000);
 
         // Start fetching data
         fetchIntervalId = setInterval(fetchData, 1000);
