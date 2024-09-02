@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexmain.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>GUI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../images/logo.jpeg" alt="Arya Logo" class="logo">
+        <div class="arya">
+            <H2>DJS ARYA</H2>
+        </div>
+        <div class="change">
+            <div class="restart"><img id="restartButton" src="../images/restart.png" alt="Restart"></div>
+            <div class="pause"><img id="playpauseButton" src="../images/save.png" alt="Play/Pause"></div>
+        </div>
+
+
+        <div class="teamid">
+            <img src="../images/flag.jpeg" class="flag">
+            <H2>TEAM ID : 1006</H2>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="button-container">
+            <button class="power">POWER</button>
+            <button class="sim">SIM MODE</button>
+            <button class="flight">FLIGHT MODE</button>
+            <button class="calibrate">CALIBRATE</button>
+        </div>
+
+        <div class="main-home-content">
+            <div class="cmdgraph">
+                <div class="cmd" id="terminal">
+                   <input type="text" id="commandInput" placeholder="Enter your command here">
+                    <div class="output" id="outputBox"></div> 
+                </div>
+                <div class="graph">
+                    <h2>3D-Graph</h2>
+                    <div id="graph-image"></div>
+                </div>
+            </div>
+            <div class="model-3d">
+                <img src="../images/3dmodel.png" alt="3D Model" class="model-image">
+                <h2>CanSat Orientation</h2>
+                <h3>36fps</h1>
+            </div>
+<<<<<<< HEAD
+
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
+            </div>
+
+            <table id="csvRoot"></table>
+            <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+            <script type="module" src="./js/TableCsv.js"></script>
+=======
+>>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
+        </div>
+
+        <div class="parameters">
+            <div class="parameter">
+                <p class="parameter-name">Altitude(m)</p>
+                <p class="parameter-value" id="altitude">3000</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Temperature(C)</p>
+<<<<<<< HEAD
+                <p class="parameter-value">22</p>
+=======
+                <p class="parameter-value" id="temperature">22</p>
+>>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Pressure(Pa)</p>
+                <p class="parameter-value" id="pressure">1013</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Acceleration</p>
+                <p class="parameter-value">100</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Rotation</p>
+                <p class="parameter-value">x:32, y:16, z:164</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Latitude, Longitude()</p>
+                <p class="parameter-value" id="latlong">19.0034, 72.9083</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Gyro Spin Rate</p>
+                <p class="parameter-value">6</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Voltage(V)</p>
+                <p class="parameter-value" id="voltage">0.01</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Packet Count</p>
+                <p class="parameter-value" id="count">101</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Satellite Count</p>
+                <p class="parameter-value">3000</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Gyrometer(bar)</p>
+                <p class="parameter-value">12.27</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Tilt(x,y)</p>
+                <p class="parameter-value" id="tilt">-10,40</p>
+            </div>
+        </div>
+    </div>
+<<<<<<< HEAD
+
+=======
+    <div class="middle-graphs">
+        <canvas id="graph1" class="graphphoto"></canvas>
+        <canvas id="graph2" class="graphphoto"></canvas>
+        <canvas id="graph3" class="graphphoto"></canvas>
+        <canvas id="graph4" class="graphphoto"></canvas>
+        <canvas id="graph5" class="graphphoto"></canvas>
+        <canvas id="graph6" class="graphphoto"></canvas>
+    </div>
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
+    </div>
+    <table id="csvRoot"></table>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+    <script type="module" src="./js/TableCsv.js"></script>
+>>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
+    <div class="lower">
+        <div class="navigation-box">
+            <div class="button-box">
+                <img src="../images/home.png" alt="home" class="button">
+                <button><a href="indexhome.html">HOME</a></button>
+            </div>
+            <div class="button-box">
+                <img src="../images/graph.png" alt="graphs" class="button">
+                <button><a href="indexgraphs.html">GRAPHS</a></button>
+            </div>
+            <div class="button-box">
+                <img src="../images/maps.png" alt="maps" class="button">
+                <button><a href="indexmaps.html">MAPS</a></button>
+            </div>
+            <div class="button-box">
+                <img src="../images/csv.png" alt="csv" class="button">
+                <button><a href="indexcsv.html">CSV DATA</a></button>
+            </div>
+        </div>
+        <div class="infographics">
+            <div class="deployment-status">
+                <h2>Deployment Status</h2>
+                <p>Parachute - N</p>
+                <p>Secondary Descent - N</p>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="flight-software">
+                <h2>Flight Software State</h2>
+                <div class="flight-software-all-states" >
+                    <div class="flight-software-state"id="f1">
+                        <h3>Boot</h3>
+                    </div>
+                    <div class="flight-software-state" id="f2">
+                        <h3>Test Mode</h3>
+                    </div>
+                    <div class="flight-software-state" id="f3">
+                        <h3>Launch Pad</h3>
+                    </div>
+                    <div class="flight-software-state" id="f4">
+                        <h3>Ascent</h3>
+                    </div>
+                    <div class="flight-software-state" id="f5">
+                        <h3>Rocket Deploy</h3>
+                    </div>
+                    <div class="flight-software-state" id="f6">
+                        <h3>Aerobrake Release</h3>
+                    </div>
+                    <div class="flight-software-state" id="f7">
+                        <h3>Impact</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="time">
+            <div class="mission-time" >
+                <h2>Mission Time</h2>
+                <p id="mission-time"></p>
+            </div>
+            <div class="packet-count" >
+                <h2>Packet Count</h2>
+                <p id="packet-count"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+    <script src="./js/cmd.js"></script>
+<<<<<<< HEAD
+
+=======
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+>>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
+</body>
+
+</html>
