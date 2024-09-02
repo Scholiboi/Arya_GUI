@@ -56,20 +56,65 @@
                 <h3>36fps</h1>
             </div>
 
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
+            </div>
+
+            <table id="csvRoot"></table>
+            <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+            <script type="module" src="./js/TableCsv.js"></script>
         </div>
-    <div id="data">
-        <div id="a">Altitude: --</div>
-        <div id="t">Temperature: --</div>
-        <div id="v">Voltage: --</div>
-        <div id="p">Pressure: --</div>
-        <div id="g_la">GPS Latitude: --</div>
-        <div id="g_lo">GPS Longitude: --</div>
-        <div id="g_ti">Tilt (X,Y): --</div>
-        <div id="g_r">Gyro Rate: --</div>
-        <div id="m">Mode: --</div>
-        <div id="s">State: --</div>
-        <div id="a_s">Air Speed: --</div>
-        <div id="h_s">HS Deployed: --</div>
+
+        <div class="parameters">
+            <div class="parameter">
+                <p class="parameter-name">Altitude(m)</p>
+                <p class="parameter-value">3000</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Temperature(C)</p>
+                <p class="parameter-value">22</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Pressure(Pa)</p>
+                <p class="parameter-value">1013</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Acceleration</p>
+                <p class="parameter-value">100</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Rotation</p>
+                <p class="parameter-value">x:32, y:16, z:164</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Latitude, Longitude()</p>
+                <p class="parameter-value">19.0034, 72.9083</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Gyro Spin Rate</p>
+                <p class="parameter-value">6</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Voltage(V)</p>
+                <p class="parameter-value">0.01</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Packet Count</p>
+                <p class="parameter-value">101</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Satellite Count</p>
+                <p class="parameter-value">3000</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Gyrometer(bar)</p>
+                <p class="parameter-value">12.27</p>
+            </div>
+            <div class="parameter">
+                <p class="parameter-name">Tilt(x,y)</p>
+                <p class="parameter-value">-10,40</p>
+            </div>
+        </div>
     </div>
 
     <div class="lower">
@@ -100,26 +145,26 @@
             <div class="horizontal-line"></div>
             <div class="flight-software">
                 <h2>Flight Software State</h2>
-                <div class="flight-software-all-states">
-                    <div class="flight-software-state">
+                <div class="flight-software-all-states" >
+                    <div class="flight-software-state"id="f1">
                         <h3>Boot</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="f2">
                         <h3>Test Mode</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="f3">
                         <h3>Launch Pad</h3>
                     </div>
-                    <div class="flight-software-state" id="current-state">
+                    <div class="flight-software-state" id="f4">
                         <h3>Ascent</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="f5">
                         <h3>Rocket Deploy</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="f6">
                         <h3>Aerobrake Release</h3>
                     </div>
-                    <div class="flight-software-state">
+                    <div class="flight-software-state" id="f7">
                         <h3>Impact</h3>
                     </div>
                 </div>
@@ -136,9 +181,10 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
     <script src="./js/cmd.js"></script>
-    <script src="./datapoints.js"></script>
+
 </body>
 
 </html>
