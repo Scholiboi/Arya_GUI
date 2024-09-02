@@ -69,37 +69,24 @@ class TableCsv {
   }
 }
 
-localStorage.setItem('powerStatus', 'off');
-
 document.addEventListener('DOMContentLoaded', function () {
-
   const powerButton = document.querySelector('.power');
+  const tableRoot = document.querySelector("#csvRoot");
+  const tableCsv = new TableCsv(tableRoot);
+  let intervalId;
+  let powerStatus = 'off';
+
   if (powerButton) {
     powerButton.addEventListener('click', function () {
-      console.log("on");
-      let key = 'powerStatus';
-      let oldValue = localStorage.getItem(key);
-      let value = oldValue == 'on' ? 'off' : 'on';
-      localStorage.setItem(key, value);
+      powerStatus = powerStatus === 'on' ? 'off' : 'on';
       this.classList.toggle('clicked');
-      const e = new StorageEvent('storage', {
-        storageArea: window.localStorage,
-        key,
-        oldValue,
-        newValue: value,
-        url: window.location.href,
-      });
-      window.dispatchEvent(e);
+      handlePowerStatusChange(powerStatus);
     });
   }
 
-  const tableRoot = document.querySelector("#csvRoot");
-  const tableCsv = new TableCsv(tableRoot);
-let intervalId;
-  window.addEventListener('storage', function (e) {
-    if (e.key === 'powerStatus') {
-      if(e.newValue === 'on') {
-      console.log("i is here");
+  function handlePowerStatusChange(status) {
+    if (status === 'on') {
+      console.log("Power is on");
 
       Papa.parse("./js/test.csv", {
         delimiter: ",",
@@ -112,7 +99,7 @@ let intervalId;
 
           let currentIndex = 0;
 
-           intervalId = setInterval(() => {
+          intervalId = setInterval(() => {
             if (currentIndex < data.length) {
               tableCsv.setBody([data[currentIndex]]);
               currentIndex++;
@@ -122,14 +109,12 @@ let intervalId;
           }, 1000);
         }
       });
-    }
-    else if(e.newValue === 'off') {
-if (intervalId) {
-                    clearInterval(intervalId); // Stop adding new rows
-                }
+    } else if (status === 'off') {
+      if (intervalId) {
+        clearInterval(intervalId); // Stop adding new rows
+      }
       tableCsv.clear();
-
+      console.log("Power is off and table is reset");
     }
-    }
-  });
+  }
 });

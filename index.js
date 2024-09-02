@@ -1,14 +1,64 @@
+// localStorage.setItem('powerStatus', 'off');
+// document.querySelector('.power').addEventListener('click', function() {
+//     localStorage.setItem('powerStatus', 'on');
+// });
+
 let charts = [];
-let intervalId;
+let intervalId = null;
+let fetchIntervalId = null;
 let a = 0;
-localStorage.setItem('powerStatus', 'off');
+let currentRow = 0;
+
+const fetchData = () => {
+    fetch(`test.csv?timestamp=${Date.now()}`)
+        .then(response => response.text())
+        .then(text => {
+            Papa.parse(text, {
+                header: true,
+                dynamicTyping: true,
+                complete: ({ data }) => {
+                    if (data.length) {
+                        console.log('CSV data:', data);
+                        const rowData = data[currentRow];
+                        console.log('Displaying row:', currentRow, rowData);
+
+                        document.getElementById('temperature').innerText = rowData.TEMPERATURE;
+                        document.getElementById('pressure').innerText = rowData.PRESSURE;
+                        document.getElementById('voltage').innerText = rowData.VOLTAGE;
+                        document.getElementById('altitude').innerText = rowData.ALTITUDE;
+                        document.getElementById('tilt').innerText = `x: ${rowData.TILT_X}, y: ${rowData.TILT_Y}`;
+                        document.getElementById('latlong').innerText = `${rowData.GPS_LATITUDE}, ${rowData.GPS_LONGITUDE}`;
+                        currentRow = (currentRow + 1) % data.length;
+                    } else {
+                        console.error('No data found in the CSV.');
+                    }
+                },
+                error: error => console.error('Error parsing CSV:', error)
+            });
+        })
+        .catch(error => console.error('Error fetching CSV:', error));
+};
+
+
 document.querySelector('.power').addEventListener('click', function() {
-    localStorage.setItem('powerStatus', 'on');
-});
-document.querySelector('.power').addEventListener('click', function() {
-    this.classList.toggle('clicked');
     if (this.classList.contains('clicked')) {
-        // Recreate charts if they don't exist
+        // Stop updating charts
+        clearInterval(intervalId);
+        clearInterval(fetchIntervalId);
+        console.log('Cleared fetch interval with ID:', fetchIntervalId);
+        fetchIntervalId = null;
+        currentRow = 0; // Reset currentRow to 0
+
+        // Clear data inside charts
+        charts.forEach(chart => {
+            chart.data.labels = [];
+            chart.data.datasets.forEach(dataset => {
+                dataset.data = [];
+            });
+            chart.update();
+        });
+    } else {
+            // Recreate charts if they don't exist
         if (charts.length === 0) {
             const ctx1 = document.getElementById('graph1').getContext('2d');
             const ctx2 = document.getElementById('graph2').getContext('2d');
@@ -33,17 +83,11 @@ document.querySelector('.power').addEventListener('click', function() {
             updateChart(charts[4], { x: a, y: Math.random() * 100 });
             updateChart(charts[5], { x: a, y: Math.random() * 100 });
         }, 1000);
-    } else {
-        // Stop updating charts
-        clearInterval(intervalId);
-        // Clear data inside charts
-        charts.forEach(chart => {
-            chart.data.labels = [];
-            chart.data.datasets.forEach(dataset => {
-                dataset.data = [];
-            });
-            chart.update();
-        });
+
+        // Start fetching data
+        fetchIntervalId = setInterval(fetchData, 1000);
+        console.log('Started fetch interval with ID:', fetchIntervalId);
+        
     }
 });
 
@@ -70,9 +114,12 @@ function createChart(ctx, label) {
     });
 }
 
-function updateChart(chart, newData) {
-    chart.data.labels.push(newData.x);
-    chart.data.datasets[0].data.push(newData.y);
+// Assuming updateChart function is defined elsewhere
+function updateChart(chart, data) {
+    chart.data.labels.push(data.x);
+    chart.data.datasets.forEach(dataset => {
+        dataset.data.push(data.y);
+    });
     chart.update();
 }
 
@@ -249,15 +296,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
-function fetchData() {
-    fetch('test.csv')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('temperature').innerText = `Temperature: ${data.temperature} °C`;
-            document.getElementById('pressure').innerText = `Pressure: ${data.pressure} hPa`;
-            document.getElementById('voltage').innerText = `Voltage: ${data.voltage} V`;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}

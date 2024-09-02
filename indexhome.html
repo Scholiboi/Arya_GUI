@@ -9,8 +9,6 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>GUI</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css" />
-    <script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
 </head>
 
 <body>
@@ -19,16 +17,11 @@
         <div class="arya">
             <H2>DJS ARYA</H2>
         </div>
-<<<<<<< HEAD
-        <div class="pause"><img src="../images/save.png" alt="Arya Logo" class="logo"></div>
-        <div class="restart"><img src="../images/restart.png" alt="Arya Logo" class="logo"></div>
-=======
         <div class="change">
             <div class="restart"><img id="restartButton" src="../images/restart.png" alt="Restart"></div>
             <div class="pause"><img id="playpauseButton" src="../images/save.png" alt="Play/Pause"></div>
         </div>
 
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
         <div class="teamid">
             <img src="../images/flag.jpeg" class="flag">
             <H2>TEAM ID : 1006</H2>
@@ -59,20 +52,19 @@
                 <h2>CanSat Orientation</h2>
                 <h3>36fps</h1>
             </div>
-
         </div>
         <div class="parameters">
             <div class="parameter">
                 <p class="parameter-name">Altitude(m)</p>
-                <p class="parameter-value">3000</p>
+                <p class="parameter-value" id="altitude">3000</p>
             </div>
             <div class="parameter">
-                <p class="parameter-name" id="temperature">Temperature(C)</p>
-                <p class="parameter-value">22</p>
+                <p class="parameter-name">Temperature(C)</p>
+                <p class="parameter-value" id="temperature">22</p>
             </div>
             <div class="parameter">
                 <p class="parameter-name">Pressure(Pa)</p>
-                <p class="parameter-value">1013</p>
+                <p class="parameter-value" id="pressure">1013</p>
             </div>
             <div class="parameter">
                 <p class="parameter-name">Acceleration</p>
@@ -84,7 +76,7 @@
             </div>
             <div class="parameter">
                 <p class="parameter-name">Latitude, Longitude()</p>
-                <p class="parameter-value">19.0034, 72.9083</p>
+                <p class="parameter-value" id="latlong">19.0034, 72.9083</p>
             </div>
             <div class="parameter">
                 <p class="parameter-name">Gyro Spin Rate</p>
@@ -92,11 +84,11 @@
             </div>
             <div class="parameter">
                 <p class="parameter-name">Voltage(V)</p>
-                <p class="parameter-value">0.01</p>
+                <p class="parameter-value" id="voltage">0.01</p>
             </div>
             <div class="parameter">
                 <p class="parameter-name">Packet Count</p>
-                <p class="parameter-value">101</p>
+                <p class="parameter-value" id="count">101</p>
             </div>
             <div class="parameter">
                 <p class="parameter-name">Satellite Count</p>
@@ -108,10 +100,24 @@
             </div>
             <div class="parameter">
                 <p class="parameter-name">Tilt(x,y)</p>
-                <p class="parameter-value">-10,40</p>
+                <p class="parameter-value" id="tilt">-10,40</p>
             </div>
         </div>
     </div>
+    <div class="graphs">
+        <canvas id="graph1" class="graphphoto"></canvas>
+        <canvas id="graph2" class="graphphoto"></canvas>
+        <canvas id="graph3" class="graphphoto"></canvas>
+        <canvas id="graph4" class="graphphoto"></canvas>
+        <canvas id="graph5" class="graphphoto"></canvas>
+        <canvas id="graph6" class="graphphoto"></canvas>
+    </div>
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
+    </div>
+    <table id="csvRoot"></table>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+    <script type="module" src="./js/TableCsv.js"></script>
     <div class="lower">
         <div class="navigation-box">
             <div class="button-box">
@@ -178,6 +184,7 @@
     </div>
     <script src="index.js"></script>
     <script src="./js/cmd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

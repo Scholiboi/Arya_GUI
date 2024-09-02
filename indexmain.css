@@ -42,19 +42,6 @@ body {
   line-height: 2.5rem;
 }
 
-<<<<<<< HEAD
-.pause img {
-  height: 50px;
-  width: 50px;
-  background-color:aliceblue;
-}
-
-.restart img {
-  height: 50px;
-  width: 50px;
-  background-color:aliceblue;
-  padding: 5px;
-=======
 
 .change {
 display:flex;
@@ -75,7 +62,6 @@ flex-direction: row;
   width: 50px;
   background-color:aliceblue;
   border-radius: 10px;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .teamid {
@@ -90,13 +76,7 @@ flex-direction: row;
   align-content: center;
   font-weight: 800;
   letter-spacing: 0.025em;
-<<<<<<< HEAD
-  font-size: 1.25rem; 
-  line-height: 1.75rem;
-  position: relative; 
-=======
   font-size: 1.25rem;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .teamid h2 {
@@ -137,7 +117,7 @@ flex-direction: row;
 }
 
 .power {
-  background-color: #32cd32;
+  background-color: #dc143c;
   margin: 10px;
   height: 125px;
   width: 125px;
@@ -189,15 +169,8 @@ button {
   justify-content: space-evenly;
   margin: 10px;
   align-items: stretch;
-<<<<<<< HEAD
-
-  padding: 10px;
-  padding-right: 50px;
-  margin-top: 50px;
-=======
   /* padding: 5px; */
   padding-right: 230px;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .cmdgraph {
@@ -218,15 +191,6 @@ button {
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-<<<<<<< HEAD
-  text-align: center;
-}
-
-.cmd-image{
-
-  width: 400px;
-  height: 400px;
-=======
   height: 250px;
   width: 500px;
 }
@@ -251,7 +215,6 @@ input#commandInput {
 .cmd-image {
   width: 420px;
   height: 200px;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   border-radius: 10px;
 }
 
@@ -293,16 +256,10 @@ input#commandInput {
   width: 300px;
   height: 520px;
 }
-<<<<<<< HEAD
-.model-image{
-  width: 250px;
-  height: 350px;
-=======
 
 .model-image {
   width: 200px;
   height: 300px;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   border-radius: 10px;
 }
 
@@ -405,6 +362,31 @@ canvas {
   margin-top: 100px;
 }
 
+table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+th {
+  background: #009578;
+  color: #ffffff;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+tr:nth-child(even) {
+  background: #eeeeee;
+}
+
 /* Middle Content Styles ends here */
 
 
@@ -449,23 +431,10 @@ canvas {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-.button-box img{
-  width: 40px;
-  height: 40px;
-}
-
-.horizontal-line {
-  width: 100%; /* Full width */
-  height: 2px; /* Thickness */
-  background-color: black; /* Line color */
-  margin: 10px 0;
-=======
 .button-box img {
   width: 30px;
   height: 30px;
   padding-right: 10px;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
 }
 
 .infographics {
@@ -479,13 +448,8 @@ canvas {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-.flight-status{
-  display:flex;
-=======
 .deployment-status {
   display: flex;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
@@ -527,13 +491,8 @@ canvas {
   padding: 0px;
 }
 
-<<<<<<< HEAD
-.flight-software-all-states{
-  display:flex;
-=======
 .flight-software-all-states {
   display: flex;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   flex-direction: row;
   align-items: center;
   background-color: #001687;
@@ -559,15 +518,9 @@ canvas {
   background-color: #79EBDE;
 }
 
-<<<<<<< HEAD
-.time{
-  display:flex;
-  flex-direction: column;
-=======
 .time {
   display: flex;
   flex-direction: row;
->>>>>>> 098a97841a814a6674c45929f2c4a62d2425298d
   align-items: center;
   background-color: #D9D9D9;
   margin: 15px;
