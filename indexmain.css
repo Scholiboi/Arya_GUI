@@ -14,7 +14,7 @@ body {
   align-items: center;
   background-color: #96ceb4;
   width: 100%;
-  position: sticky;
+  position: fixed;
 }
 
 .logo {
@@ -93,13 +93,13 @@ flex-direction: row;
 
 /* Middle Content Styles Start here */
 .middle {
+  margin-top: 75px;
   margin-left: 150px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #96CEB4;
+  background-color: #d0da12;
   width: 100%;
+  position: relative;
 }
 
 .button-container {
@@ -161,9 +161,12 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+}
+.main-home-content, .middle-graphs, .maps, #csvRoot {
+  position: absolute;
 }
 
+/* Show the desired element */
 .cmd-graph{
   display: flex;
   flex-direction: column;
@@ -324,7 +327,7 @@ input#commandInput {
 }
 
 .middle-graphs {
-  margin-left: 200px;
+  margin-left: 75px;
   width: 65%;
   display: grid;
   flex-direction: row;
@@ -346,7 +349,7 @@ canvas {
 }
 
 .maps {
-  margin-left: 275px;
+  margin-left: 150px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -363,7 +366,7 @@ canvas {
 
 #csvRoot {
   position: absolute;
-  margin-left: 160px;
+  margin-left: 15px;
   /* margin-top: 100px; */
   margin-bottom: 300px;
   z-index: 1000;
@@ -396,6 +399,14 @@ td{
 
 tr:nth-child(even) {
   background: #eeeeee;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
 /* Middle Content Styles ends here */
 

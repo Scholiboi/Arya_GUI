@@ -1,56 +1,7 @@
-<<<<<<< HEAD
-// let charts = [];
-// let intervalId;
-// let a = 0;
-=======
->>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
 // localStorage.setItem('powerStatus', 'off');
 // document.querySelector('.power').addEventListener('click', function() {
 //     localStorage.setItem('powerStatus', 'on');
 // });
-<<<<<<< HEAD
-// document.querySelector('.power').addEventListener('click', function() {
-//     this.classList.toggle('clicked');
-//     if (this.classList.contains('clicked')) {
-//         // Recreate charts if they don't exist
-//         if (charts.length === 0) {
-//             const ctx1 = document.getElementById('graph1').getContext('2d');
-//             const ctx2 = document.getElementById('graph2').getContext('2d');
-//             const ctx3 = document.getElementById('graph3').getContext('2d');
-//             const ctx4 = document.getElementById('graph4').getContext('2d');
-//             const ctx5 = document.getElementById('graph5').getContext('2d');
-//             const ctx6 = document.getElementById('graph6').getContext('2d');
-//             charts.push(createChart(ctx1, 'graph 1'));
-//             charts.push(createChart(ctx2, 'graph 2'));
-//             charts.push(createChart(ctx3, 'graph 3'));
-//             charts.push(createChart(ctx4, 'graph 4'));
-//             charts.push(createChart(ctx5, 'graph 5'));
-//             charts.push(createChart(ctx6, 'graph 6'));
-//         }
-//         // Start updating charts
-//         intervalId = setInterval(() => {
-//             a++;
-//             updateChart(charts[0], { x: a, y: Math.random() * 100 });
-//             updateChart(charts[1], { x: a, y: Math.random() * 100 });
-//             updateChart(charts[2], { x: a, y: Math.random() * 100 });
-//             updateChart(charts[3], { x: a, y: Math.random() * 100 });
-//             updateChart(charts[4], { x: a, y: Math.random() * 100 });
-//             updateChart(charts[5], { x: a, y: Math.random() * 100 });
-//         }, 1000);
-//     } else {
-//         // Stop updating charts
-//         clearInterval(intervalId);
-//         // Clear data inside charts
-//         charts.forEach(chart => {
-//             chart.data.labels = [];
-//             chart.data.datasets.forEach(dataset => {
-//                 dataset.data = [];
-//             });
-//             chart.update();
-//         });
-//     }
-// });
-=======
 
 let charts = [];
 let intervalId = null;
@@ -160,38 +111,30 @@ document.querySelector('.power').addEventListener('click', function() {
         
     }
 });
->>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
 
-// function createChart(ctx, label) {
-//     return new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: [],
-//             datasets: [{
-//                 label: label,
-//                 data: [],
-//                 borderWidth: 1,
-//                 fill: false
-//             }]
-//         },
-//         options: {
-//             scales: {
-//                 x: {
-//                     type: 'linear',
-//                     position: 'bottom'
-//                 }
-//             }
-//         }
-//     });
-// }
+function createChart(ctx, label) {
+    return new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: label,
+                data: [],
+                borderWidth: 1,
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
 
-<<<<<<< HEAD
-// function updateChart(chart, newData) {
-//     chart.data.labels.push(newData.x);
-//     chart.data.datasets[0].data.push(newData.y);
-//     chart.update();
-// }
-=======
 // Assuming updateChart function is defined elsewhere
 function updateChart(chart, data) {
     chart.data.labels.push(data.x);
@@ -200,73 +143,84 @@ function updateChart(chart, data) {
     });
     chart.update();
 }
->>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
 
-// document.querySelector('.flight').addEventListener('click', function() {
-//     this.classList.toggle('clicked');
-// });
+document.querySelector('.flight').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+});
 
-// document.querySelector('.sim').addEventListener('click', function() {
-//     this.classList.toggle('clicked');
-// });
+document.querySelector('.sim').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+});
 
 
-// // Initialize the data arrays
-// var x = [];
-// var y = [];
-// var z = [];
+// Initialize the data arrays
+var x = [];
+var y = [];
+var z = [];
 
-// // Initial plot data and layout
-// var data = [{
-//     x: x,
-//     y: y,
-//     z: z,
-//     mode: 'lines',
-//     type: 'scatter3d'
-// }];
+// Initial plot data and layout
+var data = [{
+    x: x,
+    y: y,
+    z: z,
+    mode: 'lines',
+    type: 'scatter3d'
+}];
 
-// var layout = {
-//     title: '3D Line Plot',
-//     autosize: true,
-//     scene: {
-//         xaxis: { title: 'X Axis' },
-//         yaxis: { title: 'Y Axis' },
-//         zaxis: { title: 'Z Axis' }
-//     }
-// };
+var layout = {
+    title: '3D Line Plot',
+    margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0
+    },
+    padding:{
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0
+    },
+    overlaying: false,
+    scene: {
+        xaxis: { title: 'X Axis' },
+        yaxis: { title: 'Y Axis' },
+        zaxis: { title: 'Z Axis' }
+    }
+};
 
-// // Create the initial plot
-// Plotly.newPlot('graph-image', data, layout);
+// Create the initial plot
+Plotly.newPlot('graph-image', data, layout);
 
-// // Function to update the data
-// function updateData() {
-//     // Generate new random data
-//     var newX = Math.random() * 10;
-//     var newY = Math.random() * 10;
-//     var newZ = Math.random() * 10;
+// Function to update the data
+function updateData() {
+    // Generate new random data
+    var newX = Math.random() * 10;
+    var newY = Math.random() * 10;
+    var newZ = Math.random() * 10;
 
-//     // Append new data to the arrays
-//     x.push(newX);
-//     y.push(newY);
-//     z.push(newZ);
+    // Append new data to the arrays
+    x.push(newX);
+    y.push(newY);
+    z.push(newZ);
 
-//     // Keep the array length fixed
-//     if (x.length > 50) {
-//         x.shift();
-//         y.shift();
-//         z.shift();
-//     }
+    // Keep the array length fixed
+    if (x.length > 50) {
+        x.shift();
+        y.shift();
+        z.shift();
+    }
 
-//     // Update the plot
-//     Plotly.update('graph-image', {
-//         x: [x],
-//         y: [y],
-//         z: [z]
-//     }, [0]); 
-// }
+    // Update the plot
+    Plotly.update('graph-image', {
+        x: [x],
+        y: [y],
+        z: [z]
+    }, [0]); 
+}
 
-// // Update the graph every second
-// setInterval(updateData, 1000);
+// Update the graph every second
+setInterval(updateData, 1000);
 
 
 
@@ -380,7 +334,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-<<<<<<< HEAD
 
 const state = [];
 let index3=0;
@@ -458,7 +411,74 @@ function display_fss() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const homeButton = document.getElementById('Home');
 
+    const csvToggle = document.getElementById('csvRoot');
+    const graphToggle = document.getElementById('main-graphs');
+    const mapsToggle = document.getElementById('interactive-map');
+    const homeToggle = document.getElementById('home-content');
+    const paramToggle = document.getElementById('parameters-box')
+    
+    homeButton.addEventListener('click', function () {
+        homeToggle.style.visibility = 'visible';
+        csvToggle.style.visibility = 'hidden';
+        graphToggle.style.visibility = 'hidden';
+        mapsToggle.style.visibility = 'hidden';
+        paramToggle.style.visibility = 'visible';
+    });
+});
 
-=======
->>>>>>> a44021d73991b64a39066fc3e23143d5a0fffc1d
+document.addEventListener('DOMContentLoaded', function () {
+    const csvButton = document.getElementById('CSV');
+    
+    const csvToggle = document.getElementById('csvRoot');
+    const graphToggle = document.getElementById('main-graphs');
+    const mapsToggle = document.getElementById('interactive-map');
+    const homeToggle = document.getElementById('home-content');
+    const paramToggle = document.getElementById('parameters-box')
+
+    csvButton.addEventListener('click', function () {
+        csvToggle.style.visibility = 'visible';
+        graphToggle.style.visibility = 'hidden';
+        mapsToggle.style.visibility = 'hidden';
+        homeToggle.style.visibility = 'hidden';
+        paramToggle.style.visibility = 'hidden';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const graphButton = document.getElementById('graphs');
+    
+    const csvToggle = document.getElementById('csvRoot');
+    const graphToggle = document.getElementById('main-graphs');
+    const mapsToggle = document.getElementById('interactive-map');
+    const homeToggle = document.getElementById('home-content');
+    const paramToggle = document.getElementById('parameters-box')
+    
+    graphButton.addEventListener('click', function () {
+        graphToggle.style.visibility = 'visible';
+        csvToggle.style.visibility = 'hidden';
+        mapsToggle.style.visibility = 'hidden';
+        homeToggle.style.visibility = 'hidden';
+        paramToggle.style.visibility = 'visible';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const mapsButton = document.getElementById('maps');
+    
+    const csvToggle = document.getElementById('csvRoot');
+    const graphToggle = document.getElementById('main-graphs');
+    const mapsToggle = document.getElementById('interactive-map');
+    const homeToggle = document.getElementById('home-content');
+    const paramToggle = document.getElementById('parameters-box')
+    
+    mapsButton.addEventListener('click', function () {
+        mapsToggle.style.visibility = 'visible';
+        csvToggle.style.visibility = 'hidden';
+        graphToggle.style.visibility = 'hidden';
+        homeToggle.style.visibility = 'hidden';
+        paramToggle.style.visibility = 'visible';
+    });
+});
