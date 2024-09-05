@@ -231,9 +231,14 @@ window.onload = function() {
                     packet_count.push(row['PACKET_COUNT']);
                     console.log("packet_count done")
                 } 
+                if(row['STATE']) {
+                    state.push(row['STATE']);
+                    console.log("state done")
+                }
             });
             setInterval(display_ct, 1000);
             setInterval(display_pc, 1000);
+            setInterval(display_fss, 1000);
           },
           error: (error) => {
             console.error('Error parsing CSV:', error);
@@ -317,3 +322,80 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+const state = [];
+let index3=0;
+function display_fss() {
+    if (index3 < state.length && !isPaused) {
+        console.log(state[index3]);
+        if (state[index3]==1) {
+            document.getElementById('f1').style.backgroundColor= '#79EBDE';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==2) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#79EBDE';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==3) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#79EBDE';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==4) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#79EBDE';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==5) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#79EBDE';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==6) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#79EBDE';
+            document.getElementById('f7').style.backgroundColor= '#39A79A';
+        }
+        else if (state[index3]==7) {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+            document.getElementById('f2').style.backgroundColor= '#39A79A';
+            document.getElementById('f3').style.backgroundColor= '#39A79A';
+            document.getElementById('f4').style.backgroundColor= '#39A79A';
+            document.getElementById('f5').style.backgroundColor= '#39A79A';
+            document.getElementById('f6').style.backgroundColor= '#39A79A';
+            document.getElementById('f7').style.backgroundColor= '#79EBDE';
+        }
+        else {
+            document.getElementById('f1').style.backgroundColor= '#39A79A';
+        }
+        // document.getElementById('state').innerHTML = state[index3];
+        index3++;
+    }
+}
