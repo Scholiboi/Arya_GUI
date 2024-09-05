@@ -21,7 +21,6 @@
             <div class="restart"><img id="restartButton" src="../images/restart.png" alt="Restart"></div>
             <div class="pause"><img id="playpauseButton" src="../images/save.png" alt="Play/Pause"></div>
         </div>
-
         <div class="teamid">
             <img src="../images/flag.jpeg" class="flag">
             <H2>TEAM ID : 1006</H2>
@@ -29,13 +28,13 @@
     </div>
     <div class="middle">
         <div class="button-container">
-            <button class="power">POWER</button>
+            <button class="power" id="power_button">POWER</button>
             <button class="sim">SIM MODE</button>
             <button class="flight">FLIGHT MODE</button>
             <button class="calibrate">CALIBRATE</button>
         </div>
 
-        <div class="main-home-content">
+        <div class="main-home-content" id="home-content">
             <div class="cmdgraph">
                 <div class="cmd" id="terminal">
                    <input type="text" id="commandInput" placeholder="Enter your command here">
@@ -52,7 +51,8 @@
                 <h3>36fps</h1>
             </div>
         </div>
-        <div class="parameters">
+
+        <div class="parameters" id="parameters-box">
             <div class="parameter">
                 <p class="parameter-name">Altitude(m)</p>
                 <p class="parameter-value" id="altitude">3000</p>
@@ -86,10 +86,6 @@
                 <p class="parameter-value" id="voltage">0.01</p>
             </div>
             <div class="parameter">
-                <p class="parameter-name">Packet Count</p>
-                <p class="parameter-value" id="count">101</p>
-            </div>
-            <div class="parameter">
                 <p class="parameter-name">Satellite Count</p>
                 <p class="parameter-value">3000</p>
             </div>
@@ -102,38 +98,38 @@
                 <p class="parameter-value" id="tilt">-10,40</p>
             </div>
         </div>
+        <div class="middle-graphs hidden" id="main-graphs">
+            <canvas id="graph1" class="graphphoto"></canvas>
+            <canvas id="graph2" class="graphphoto"></canvas>
+            <canvas id="graph3" class="graphphoto"></canvas>
+            <canvas id="graph4" class="graphphoto"></canvas>
+            <canvas id="graph5" class="graphphoto"></canvas>
+            <canvas id="graph6" class="graphphoto"></canvas>
+        </div>
+        <div class="maps hidden" id="interactive-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
+        </div>
+        <table id="csvRoot" class="hidden"></table>
     </div>
-    <div class="middle-graphs">
-        <canvas id="graph1" class="graphphoto"></canvas>
-        <canvas id="graph2" class="graphphoto"></canvas>
-        <canvas id="graph3" class="graphphoto"></canvas>
-        <canvas id="graph4" class="graphphoto"></canvas>
-        <canvas id="graph5" class="graphphoto"></canvas>
-        <canvas id="graph6" class="graphphoto"></canvas>
-    </div>
-    <div class="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
-    </div>
-    <table id="csvRoot"></table>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
     <script type="module" src="./js/TableCsv.js"></script>
     <div class="lower">
         <div class="navigation-box">
             <div class="button-box">
                 <img src="../images/home.png" alt="home" class="button">
-                <button><a href="indexhome.html">HOME</a></button>
+                <button id="Home">HOME</button>
             </div>
             <div class="button-box">
                 <img src="../images/graph.png" alt="graphs" class="button">
-                <button><a href="indexgraphs.html">GRAPHS</a></button>
+                <button id="graphs">GRAPHS</button>
             </div>
             <div class="button-box">
                 <img src="../images/maps.png" alt="maps" class="button">
-                <button><a href="indexmaps.html">MAPS</a></button>
+                <button id="maps">MAPS</button>
             </div>
             <div class="button-box">
                 <img src="../images/csv.png" alt="csv" class="button">
-                <button><a href="indexcsv.html">CSV DATA</a></button>
+                <button id="CSV">CSV DATA</button>
             </div>
         </div>
         <div class="infographics">
@@ -171,8 +167,9 @@
             </div>
         </div>
         <div class="time">
-            <div class="mission-time" >
+            <div class="mission-time">
                 <h2>Mission Time</h2>
+                <span id="time"></span>
                 <p id="mission-time"></p>
             </div>
             <div class="packet-count" >
@@ -181,9 +178,12 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/index.js"></script>
     <script src="./js/cmd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/3d_graph.js"></script>
 </body>
 
 </html>

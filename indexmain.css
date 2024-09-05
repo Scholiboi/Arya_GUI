@@ -1,4 +1,4 @@
-/* Header Content Styles Start Here */
+ /* Header Content Styles Start Here */
 body {
   background-color: #96ceb4;
   font-family: Arial, sans-serif;
@@ -14,23 +14,25 @@ body {
   align-items: center;
   background-color: #96ceb4;
   width: 100%;
-  position: sticky;
+  position: fixed;
+  margin: 0%;
+  padding: 0%;
 }
 
 .logo {
   width: auto;
-  height: 55px;
-  margin: 10px;
+  height: 60px;
+  margin: 0.5%;
   border-radius: 10px;
-  margin-left: 30px;
+  margin-left: 2%;
 }
 
 .arya {
   display: flex;
-  width: 550px;
+  width: 50%;
   border-radius: 10px;
   height: 50px;
-  margin: 10px;
+  margin: 1%;
   background-color: aliceblue;
   align-items: center;
   justify-content: center;
@@ -52,24 +54,24 @@ flex-direction: row;
 #playpauseButton  {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
-  margin-left: 40px;
+  background-color:#96ceb4;
+  margin-left: 30%;
   border-radius: 10px;
 }
 
 #restartButton {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
+  background-color:#96ceb4;
   border-radius: 10px;
 }
 
 .teamid {
   display: flex;
-  width: 300px;
+  width: 25%;
   border-radius: 10px;
   height: 50px;
-  margin: 10px;
+  margin: 1%;
   background-color: aliceblue;
   justify-items: center;
   text-align: center;
@@ -87,19 +89,21 @@ flex-direction: row;
   width: auto;
   height: 30px;
   margin: 10px;
+  border-radius: 3px;
 }
 
 /* Header Content Styles End here */
 
 /* Middle Content Styles Start here */
 .middle {
-  margin-left: 150px;
-  display: flex;
-  flex-direction: row;
+  margin-top: 6%;
+  margin-left: 5%;
+  /* margin-right: 5%; */
   align-items: center;
   justify-content: space-between;
-  background-color: #96CEB4;
+  background-color: #d0da12;
   width: 100%;
+  position: relative;
 }
 
 .button-container {
@@ -108,22 +112,24 @@ flex-direction: row;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 1%;
   background-color: aliceblue;
   border-radius: 10px;
   position: fixed;
   left: 0px;
-  margin-top: 10px;
+  margin-top: 1%;
   text-decoration: none;
-  height: 510px;
+  height: 62%;
+  width: 10%;
 }
 
 .power {
   background-color: #dc143c;
-  margin: 10px;
-  height: 125px;
-  width: 125px;
+  margin: 4%;
+  height: 25%;
+  width: 90%;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 button {
@@ -132,23 +138,29 @@ button {
 
 .sim {
   background-color: #dc143c;
-  margin: 5px;
-  height: 125px;
-  width: 125px;
+  margin: 4%;
+  height: 25%;
+  width: 90%;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .flight {
   background-color: #dc143c;
-  margin: 5px;
-  height: 125px;
-  width: 125px;
+  margin: 4%;
+  height: 25%;
+  width: 90%;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .calibrate {
-  background-color: #ff8c00;
-  margin-bottom: 10px;
-  height: 125px;
-  width: 125px;
+  background-color: #dc143c;
+  margin: 4%;
+  height: 25%;
+  width: 90%;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .clicked {
@@ -157,21 +169,25 @@ button {
 
 .main-home-content {
   background-color: #96CEB4;
-  border-radius: 10px;
+  border-radius: 1%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  width: 75%;
+}
+.main-home-content, .middle-graphs, .maps, #csvRoot {
+  position: absolute;
 }
 
+/* Show the desired element */
 .cmd-graph{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 10px;
+  margin: 5%;
   align-items: stretch;
   /* padding: 5px; */
-  padding-right: 230px;
+  padding-right: 20%;
 }
 
 .cmdgraph {
@@ -180,9 +196,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 10px;
-  padding-right: 10px;
-  padding-left: 150px;
+  padding: 2%;
+  padding-right: 2%;
+  padding-left: 10%;
+  width: 38%;
 }
 
 .cmd {
@@ -192,30 +209,30 @@ button {
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  height: 250px;
-  width: 500px;
+  height: 46%;
+  width: 120%;
 }
 
 input#commandInput {
   width: 80%;
-  padding: 10px;
+  padding: 3%;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 4%;
 }
 
 .output {
   width: 80%;
-  min-height: 50px;
-  padding: 10px;
+  min-height: 30%;
+  padding: 1%;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #ccc;
 }
 
 .cmd-image {
-  width: 420px;
-  height: 200px;
+  width: 42%;
+  height: 2%;
   border-radius: 10px;
 }
 
@@ -231,15 +248,14 @@ input#commandInput {
   align-items: center;
   border-radius: 10px;
   background-color: #D9D9D9;
-  margin-top: 10px;
-  height: 250px;
-  width: 500px;
+  margin-top: 5%;
+  height: 49%;
+  width: 120%;
 }
 
 #graph-image {
-  width: 300px;
-  height: 230px;
-  border-radius: 10px;
+  width: 60%;
+  height: 85%;
   justify-content: center;
   align-items: center;
 }
@@ -251,11 +267,12 @@ input#commandInput {
   align-items: center;
   background-color: #D9D9D9;
   border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 5px;
-  width: 300px;
-  height: 520px;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 2%;
+  margin-left: 7%;
+  width: 40%;
+  height: 500px;
 }
 
 .model-image {
@@ -278,16 +295,17 @@ input#commandInput {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
-  margin-top: 10px;
-  padding: 5px;
+  margin: 1%;
+  padding: 1%;
+  padding-top: 0%;
   background-color: #D9D9D9;
-  width: 220px;
-  height: 505px;
+  width: 17%;
+  height: 67%;
   border-radius: 10px;
   position: fixed;
   right: 0px;
   z-index: 1;
+  margin-top: 0%;
 }
 
 .parameter {
@@ -303,13 +321,16 @@ input#commandInput {
   margin: 0px;
   padding: 0px;
   font-size: 16px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 
 .parameter-value {
   text-align: center;
   align-items: center;
   background-color: #96CEB4;
-  margin: 0px;
+  margin:0px;
+  margin-bottom: 1%;
   padding: 0px;
   font-size: 20px;
 }
@@ -319,24 +340,25 @@ input#commandInput {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-right: 50px;
-  padding: 5px;
+  margin-right: 10%;
+  padding: 1%;
 }
 
 .middle-graphs {
-  margin-left: 200px;
+  margin-left: 7%;
   width: 65%;
   display: grid;
   flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  background-color: #311cb6;
-  margin-right: 80px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  gap: 30px;
-  padding: 10px;
+  background-color: #96CEB4;
+  margin-right: 8%;
+  margin-top: 1%;
+  padding-bottom: 25%;
+  gap: 5%;
+  font-size: 70%;
 }
+
 
 canvas {
   width: 100% !important;
@@ -346,27 +368,29 @@ canvas {
 }
 
 .maps {
-  margin-left: 275px;
+  margin-left: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 80px;
-  width: 850px;
+  padding-right: 8%;
+  width: 67%;
+  height: 80;
 }
 
 .mapphoto {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 1100px;
-  height: 550px;
+  width: 100%;
+
 }
 
 #csvRoot {
   position: absolute;
-  margin-left: 160px;
+  margin-left: 7%;
   /* margin-top: 100px; */
-  margin-bottom: 300px;
+  margin-bottom: 300%;
   z-index: 1000;
+  width: 400px;
 }
 
 table {
@@ -376,7 +400,8 @@ table {
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 55%;
+  width: 60%;
 }
 
 th {
@@ -397,6 +422,14 @@ td{
 tr:nth-child(even) {
   background: #eeeeee;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
 /* Middle Content Styles ends here */
 
 
@@ -406,36 +439,38 @@ tr:nth-child(even) {
   width: 100%;
   display: flex;
   position: fixed;
-  bottom: 0px;
+  bottom: 0%;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   background-color: #96ceb4;
   border-radius: 10px;
+  height: 25%;
 }
 
 .navigation-box {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 10px;
-  padding: 10px;
+  margin: 1%;
+  margin-bottom: 1%;
+  padding: 0.8%;
   background-color: aliceblue;
   border-radius: 10px;
-  width: 150px;
+  width: 12%;
 }
 
 .button-box {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin: 5px;
+  margin: 1%;
   color: aliceblue;
 }
 
 .button-box button {
-  padding: 5px;
-  height: 30px;
+  padding: 4%;
+  height: 20%;
   width: 90px;
   background-color: aliceblue;
   color: black;
@@ -443,9 +478,9 @@ tr:nth-child(even) {
 }
 
 .button-box img {
-  width: 30px;
-  height: 30px;
-  padding-right: 10px;
+  width: 25%;
+  height: 25%;
+  padding-right: 8%;
 }
 
 .infographics {
@@ -453,10 +488,11 @@ tr:nth-child(even) {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  margin: 5px;
-  padding: 5px;
+  margin: 0.5%;
+  padding: 0.5%;
   background-color: #D9D9D9;
   border-radius: 10px;
+  margin-bottom: 0px;
 }
 
 .deployment-status {
@@ -485,14 +521,14 @@ tr:nth-child(even) {
   /* Thickness */
   background-color: black;
   /* Line color */
-  margin: 10px 0;
+  margin: 0.5% 0;
 }
 
 .flight-software {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2px;
+  margin: 1%;
   background-color: #D9D9D9;
   border-radius: 10px;
 }
@@ -520,8 +556,8 @@ tr:nth-child(even) {
   font-size: 14px;
   color: white;
   margin: 5px;
-  width: 85px;
-  height: 85px;
+  width: 20%;
+  height: 70px;
   border-radius: 10px;
 }
 
@@ -534,9 +570,10 @@ tr:nth-child(even) {
   flex-direction: row;
   align-items: center;
   background-color: #D9D9D9;
-  margin: 15px;
+  margin: 1%;
   border-radius: 10px;
-  padding: 10px;
+  padding: 1%;
+  justify-content: center;
 }
 
 .mission-time {
@@ -544,9 +581,10 @@ tr:nth-child(even) {
   flex-direction: column;
   align-items: center;
   background-color: #96ceb4;
-  margin-right: 10px;
+  margin-right: 3%;
   border-radius: 10px;
-  padding: 5px;
+  padding: 0.5%;
+  margin: 0.5%;
 
 }
 
@@ -556,6 +594,50 @@ tr:nth-child(even) {
   align-items: center;
   background-color: #96ceb4;
   border-radius: 10px;
-  padding: 5px;
+  padding: 0.5%;
+  margin: 0.5%;
+  margin-left: 3%;
 }
 
+/* const current_time = []; 
+let index1 = 0;
+let timer; // Timer variable
+let isPaused = false; // Flag to track pause state
+
+function display_ct() {
+const powerButton = document.getElementById('power_button');
+const missionTime = document.getElementById('mission-time');
+powerButton.addEventListener('click', () => {
+    if (missionTime.style.display === 'none') {
+      if (index1 < current_time.length && !isPaused) {
+        console.log(current_time[index1]);
+        document.getElementById('mission-time').innerHTML = current_time[index1];
+        index1++;
+        }
+    missionTime.style.display = 'block';
+    } else {
+      missionTime.style.display = 'none';
+    }
+  });
+    
+}
+
+const packet_count = []; 
+let index2 = 0;
+
+function display_pc() {
+const powerButton = document.getElementById('power_button');
+const packetCount = document.getElementById('packet_count');
+powerButton.addEventListener('click', () => {
+    if (packetCount.style.display === 'none') {
+        if (index2 < packet_count.length && !isPaused) {
+            console.log(packet_count[index2]);
+            document.getElementById('packet-count').innerHTML = packet_count[index2];
+            index2++;
+        }
+    packetCount.style.display = 'block';
+    } else {
+        packetCount.style.display = 'none';
+    }
+  });
+} */

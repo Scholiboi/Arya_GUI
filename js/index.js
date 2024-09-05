@@ -95,10 +95,10 @@ document.querySelector('.power').addEventListener('click', function() {
             const ctx4 = document.getElementById('graph4').getContext('2d');
             const ctx5 = document.getElementById('graph5').getContext('2d');
             const ctx6 = document.getElementById('graph6').getContext('2d');
-            charts.push(createChart(ctx1, 'graph 1'));
-            charts.push(createChart(ctx2, 'graph 2'));
-            charts.push(createChart(ctx3, 'graph 3'));
-            charts.push(createChart(ctx4, 'graph 4'));
+            charts.push(createChart(ctx1, 'Temperature'));
+            charts.push(createChart(ctx2, 'Pressure'));
+            charts.push(createChart(ctx3, 'Voltage'));
+            charts.push(createChart(ctx4, 'Altitude'));
             charts.push(createChart(ctx5, 'graph 5'));
             charts.push(createChart(ctx6, 'graph 6'));
         }
@@ -151,65 +151,6 @@ document.querySelector('.flight').addEventListener('click', function() {
 document.querySelector('.sim').addEventListener('click', function() {
     this.classList.toggle('clicked');
 });
-
-
-// Initialize the data arrays
-var x = [];
-var y = [];
-var z = [];
-
-// Initial plot data and layout
-var data = [{
-    x: x,
-    y: y,
-    z: z,
-    mode: 'lines',
-    type: 'scatter3d'
-}];
-
-var layout = {
-    title: '3D Line Plot',
-    autosize: true,
-    scene: {
-        xaxis: { title: 'X Axis' },
-        yaxis: { title: 'Y Axis' },
-        zaxis: { title: 'Z Axis' }
-    }
-};
-
-// Create the initial plot
-Plotly.newPlot('graph-image', data, layout);
-
-// Function to update the data
-function updateData() {
-    // Generate new random data
-    var newX = Math.random() * 10;
-    var newY = Math.random() * 10;
-    var newZ = Math.random() * 10;
-
-    // Append new data to the arrays
-    x.push(newX);
-    y.push(newY);
-    z.push(newZ);
-
-    // Keep the array length fixed
-    if (x.length > 50) {
-        x.shift();
-        y.shift();
-        z.shift();
-    }
-
-    // Update the plot
-    Plotly.update('graph-image', {
-        x: [x],
-        y: [y],
-        z: [z]
-    }, [0]); 
-}
-
-// Update the graph every second
-setInterval(updateData, 1000);
-
 
 
 window.onload = function() {
@@ -323,7 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 const state = [];
 let index3=0;
 function display_fss() {
@@ -399,3 +339,15 @@ function display_fss() {
         index3++;
     }
 }
+
+
+// const powerButton = document.getElementById('power_button');
+// const missionTime = document.getElementById('mission-time');
+// powerButton.addEventListener('click', () => {
+//     if (missionTime.style.display === 'none') {
+//       missionTime.style.display = 'block';
+//     } else {
+//       missionTime.style.display = 'none';
+//     }
+//   });
+
