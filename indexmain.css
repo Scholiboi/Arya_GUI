@@ -52,7 +52,7 @@ flex-direction: row;
 #playpauseButton  {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
+  background-color:#96ceb4;
   margin-left: 40px;
   border-radius: 10px;
 }
@@ -60,7 +60,7 @@ flex-direction: row;
 #restartButton {
   height: 50px;
   width: 50px;
-  background-color:aliceblue;
+  background-color:#96ceb4;
   border-radius: 10px;
 }
 
@@ -283,10 +283,10 @@ input#commandInput {
   justify-content: center;
   margin: 10px;
   margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
   background-color: #D9D9D9;
   width: 220px;
-  height: 505px;
+  height: 525px;
   border-radius: 10px;
   position: fixed;
   right: 0px;
@@ -306,13 +306,16 @@ input#commandInput {
   margin: 0px;
   padding: 0px;
   font-size: 16px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 
 .parameter-value {
   text-align: center;
   align-items: center;
   background-color: #96CEB4;
-  margin: 0px;
+  margin:0px;
+  margin-bottom: 4px;
   padding: 0px;
   font-size: 20px;
 }
@@ -333,7 +336,7 @@ input#commandInput {
   flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  background-color: #311cb6;
+  background-color: #96CEB4;
   margin-right: 80px;
   margin-top: 10px;
   margin-bottom: 20px;

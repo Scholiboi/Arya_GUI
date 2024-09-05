@@ -28,7 +28,7 @@
     </div>
     <div class="middle">
         <div class="button-container">
-            <button class="power">POWER</button>
+            <button class="power" id="power_button">POWER</button>
             <button class="sim">SIM MODE</button>
             <button class="flight">FLIGHT MODE</button>
             <button class="calibrate">CALIBRATE</button>
@@ -102,7 +102,7 @@
                 <p class="parameter-value" id="tilt">-10,40</p>
             </div>
         </div>
-        <div class="middle-graphs" id="main-graphs">
+        <div class="middle-graphs hidden" id="main-graphs">
             <canvas id="graph1" class="graphphoto"></canvas>
             <canvas id="graph2" class="graphphoto"></canvas>
             <canvas id="graph3" class="graphphoto"></canvas>
@@ -110,10 +110,10 @@
             <canvas id="graph5" class="graphphoto"></canvas>
             <canvas id="graph6" class="graphphoto"></canvas>
         </div>
-        <div class="maps" id="interactive-map">
+        <div class="maps hidden" id="interactive-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.2799044377482!2d72.864151848388!3d19.17073649845144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a623d784a7%3A0x94c4f47384ed11c9!2sExquisite%20by%20Oberoi%20Realty!5e0!3m2!1sen!2sin!4v1724741157235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapphoto"></iframe>
         </div>
-        <table id="csvRoot"></table>
+        <table id="csvRoot" class="hidden"></table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
     <script type="module" src="./js/TableCsv.js"></script>
@@ -182,9 +182,11 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
     <script src="./js/cmd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/3d_graph.js"></script>
 </body>
 
 </html>
