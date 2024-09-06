@@ -1,6 +1,7 @@
- /* Header Content Styles Start Here */
+ /* Header Content Styles Start Here
+ #96ceb4 */
 body {
-  background-color: #96ceb4;
+  background-color: #a9cfbe;
   font-family: Arial, sans-serif;
   margin: 5px;
   margin-top: 0px;
@@ -12,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #96ceb4;
+  background-color: #a9cfbe;
   width: 100%;
   position: fixed;
   margin: 0%;
@@ -53,8 +54,8 @@ flex-direction: row;
 
 #playpauseButton  {
   height: 50px;
-  width: 50px;
-  background-color:#96ceb4;
+  width: 90px;
+  background-color:#a9cfbe;
   margin-left: 30%;
   border-radius: 10px;
 }
@@ -62,7 +63,7 @@ flex-direction: row;
 #restartButton {
   height: 50px;
   width: 50px;
-  background-color:#96ceb4;
+  background-color:#a9cfbe;
   border-radius: 10px;
 }
 
@@ -168,7 +169,7 @@ button {
 }
 
 .main-home-content {
-  background-color: #96CEB4;
+  background-color: #a9cfbe;
   border-radius: 1%;
   display: flex;
   flex-direction: row;
@@ -213,21 +214,41 @@ button {
   width: 120%;
 }
 
+.prompt {
+  background-color: black;
+  height:90%;
+  width:90%;
+  padding-top: 0.5%;
+  margin-bottom: 3%;
+  border-radius: 10px;
+}
+.prompt p{
+  color: white;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+}
+
 input#commandInput {
-  width: 80%;
+  width: 50%;
   padding: 3%;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 0.5px solid black;
   margin-bottom: 4%;
+  background-color: black;
+  color: white;
 }
 
 .output {
   width: 80%;
-  min-height: 30%;
+  min-height: 20%;
   padding: 1%;
   border-radius: 5px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #5654540a;
+  border: 1px solid black;
+  color: white;
 }
 
 .cmd-image {
@@ -236,7 +257,7 @@ input#commandInput {
   border-radius: 10px;
 }
 
-.cmd h2 {
+h2 {
   margin: 0px;
   padding: 0px;
 }
@@ -258,6 +279,7 @@ input#commandInput {
   height: 85%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .model-3d {
@@ -328,7 +350,7 @@ input#commandInput {
 .parameter-value {
   text-align: center;
   align-items: center;
-  background-color: #96CEB4;
+  background-color: #a9cfbe;
   margin:0px;
   margin-bottom: 1%;
   padding: 0px;
@@ -351,7 +373,7 @@ input#commandInput {
   flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  background-color: #96CEB4;
+  background-color: #a9cfbe;
   margin-right: 8%;
   margin-top: 1%;
   padding-bottom: 25%;
@@ -443,7 +465,7 @@ tr:nth-child(even) {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #96ceb4;
+  background-color: #a9cfbe;
   border-radius: 10px;
   height: 25%;
 }
@@ -580,7 +602,7 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #96ceb4;
+  background-color: #a9cfbe;
   margin-right: 3%;
   border-radius: 10px;
   padding: 0.5%;
@@ -592,7 +614,7 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #96ceb4;
+  background-color: #a9cfbe;
   border-radius: 10px;
   padding: 0.5%;
   margin: 0.5%;

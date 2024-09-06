@@ -352,6 +352,7 @@ var data = [{
 }];
 
 var layout = {
+    autosize: true,
     margin: {
         l: 0,
         r: 0,
